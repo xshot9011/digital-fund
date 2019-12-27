@@ -1,0 +1,178 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : to1000Hz.vf
+// /___/   /\     Timestamp : 11/11/2019 11:35:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab9/to1000Hz.vf -w C:/digitalWorkspace/lab9/to1000Hz.sch
+//Design Name: to1000Hz
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module CD4CE_HXILINX_to1000Hz(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = CLR ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_to1000Hz(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module to1000Hz(clockIn, 
+                clockOut);
+
+    input clockIn;
+   output clockOut;
+   
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_52;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_105;
+   wire XLXN_107;
+   
+   (* HU_SET = "XLXI_31_6" *) 
+   CD4CE_HXILINX_to1000Hz  XLXI_31 (.C(clockIn), 
+                                   .CE(XLXN_105), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_43));
+   INV  XLXI_32 (.I(XLXN_43), 
+                .O(XLXN_49));
+   (* HU_SET = "XLXI_33_7" *) 
+   CD4CE_HXILINX_to1000Hz  XLXI_33 (.C(XLXN_49), 
+                                   .CE(XLXN_105), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_44));
+   INV  XLXI_34 (.I(XLXN_44), 
+                .O(XLXN_50));
+   (* HU_SET = "XLXI_36_8" *) 
+   CD4CE_HXILINX_to1000Hz  XLXI_36 (.C(XLXN_50), 
+                                   .CE(XLXN_105), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_52));
+   INV  XLXI_37 (.I(XLXN_52), 
+                .O(XLXN_54));
+   (* HU_SET = "XLXI_38_9" *) 
+   CD4CE_HXILINX_to1000Hz  XLXI_38 (.C(XLXN_54), 
+                                   .CE(XLXN_105), 
+                                   .CLR(), 
+                                   .CEO(), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3(), 
+                                   .TC(XLXN_53));
+   INV  XLXI_39 (.I(XLXN_53), 
+                .O(XLXN_107));
+   (* HU_SET = "XLXI_63_10" *) 
+   FJKC_HXILINX_to1000Hz  XLXI_63 (.C(XLXN_107), 
+                                  .CLR(), 
+                                  .J(XLXN_105), 
+                                  .K(XLXN_105), 
+                                  .Q(clockOut));
+   VCC  XLXI_64 (.P(XLXN_105));
+endmodule

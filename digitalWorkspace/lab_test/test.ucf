@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+
+
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "clk123" LOC = P123;
+NET "XLXN_118" LOC = P112;
+NET "XLXN_119" LOC = P111;
+NET "XLXN_120" LOC = P105;
+NET "XLXN_121" LOC = P104;
+NET "XLXN_122" LOC = P102;
+NET "XLXN_123" LOC = P101;
+NET "XLXN_124" LOC = P100;
+NET "XLXN_125" LOC = P99;
+NET "XLXN_134" LOC = P55;
+NET "XLXN_135" LOC = P56;
+NET "XLXN_136" LOC = P57;
+NET "XLXN_137" LOC = P58;
+NET "XLXN_138" LOC = P59;
+NET "XLXN_139" LOC = P60;
+NET "XLXN_140" LOC = P61;
+NET "XLXN_141" LOC = P62;
+NET "segmen[6]" LOC = P27;
+NET "segmen[5]" LOC = P29;
+NET "segmen[4]" LOC = P32;
+NET "segmen[3]" LOC = P34;
+NET "segmen[2]" LOC = P35;
+NET "segmen[1]" LOC = P40;
+NET "segmen[0]" LOC = P41;
+NET "com[0]" LOC = P44;
+NET "com[1]" LOC = P43;

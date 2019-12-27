@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym FrequencyDivider C:/Users/P/Desktop/FrequencyDivider.sch C:/digitalWorkspace/lab7/FrequencyDivider.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym FrequencyDivider C:/Users/P/Desktop/FrequencyDivider.sch C:/digitalWorkspace/lab7/FrequencyDivider.sym 

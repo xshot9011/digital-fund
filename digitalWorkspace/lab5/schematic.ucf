@@ -1,0 +1,20 @@
+
+
+NET "CLOCK" LOC = P45;
+NET "CLEAR" LOC = P46;
+NET "d" LOC = P82;
+NET "c" LOC = P81;
+NET "b" LOC = P80;
+
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "XLXN_207" LOC = P41;
+NET "XLXN_208" LOC = P40;
+NET "XLXN_209" LOC = P35;
+NET "XLXN_210" LOC = P34;
+NET "XLXN_211" LOC = P32;
+NET "XLXN_212" LOC = P29;
+NET "XLXN_213" LOC = P27;

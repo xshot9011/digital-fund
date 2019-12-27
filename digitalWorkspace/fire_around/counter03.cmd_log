@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym counter03 C:/digitalWorkspace/fire_around/counter03.sch C:/digitalWorkspace/fire_around/counter03.sym 

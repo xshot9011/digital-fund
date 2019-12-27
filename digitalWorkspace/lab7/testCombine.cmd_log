@@ -1,0 +1,55 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym testCombine C:/digitalWorkspace/lab7/testCombine.sch C:/digitalWorkspace/lab7/testCombine.sym 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab7/testCombine.xst" -ofn "C:/digitalWorkspace/lab7/testCombine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc testCombine.ucf -p xc6slx9-tqg144-3 testCombine.ngc testCombine.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testCombine_map.ncd testCombine.ngd testCombine.pcf 
+par -w -intstyle ise -ol high -mt off testCombine_map.ncd testCombine.ncd testCombine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testCombine.twx testCombine.ncd -o testCombine.twr testCombine.pcf -ucf testCombine.ucf 
+bitgen -intstyle ise -f testCombine.ut testCombine.ncd 
+sch2sym -intstyle ise -family spartan6 -w -refsym testCombine C:/digitalWorkspace/lab7/testCombine.sch C:/digitalWorkspace/lab7/testCombine.sym 

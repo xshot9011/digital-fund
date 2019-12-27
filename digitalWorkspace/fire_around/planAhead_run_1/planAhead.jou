@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Nov 25 10:44:41 2019
+# Process ID: 16156
+# Log file: C:/digitalWorkspace/fire_around/planAhead_run_1/planAhead.log
+# Journal file: C:/digitalWorkspace/fire_around/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/digitalWorkspace/fire_around/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P123 [get_ports XLXN_2]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports {XLXN_3[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {XLXN_3[2]}]]
+set_property package_pin "" [get_ports [list  {XLXN_3[2]}]]
+startgroup
+set_property package_pin P43 [get_ports {XLXN_3[1]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {XLXN_3[2]}]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports {XLXN_3[3]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports {XLXN_4[0]}]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports {XLXN_4[1]}]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports {XLXN_4[2]}]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports {XLXN_4[3]}]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports {XLXN_4[4]}]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports {XLXN_4[5]}]
+endgroup
+save_constraints

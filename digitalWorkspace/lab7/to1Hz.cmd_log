@@ -1,0 +1,10 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2hdl -intstyle ise -family spartan6 -verilog to1Hz_drc.vf -w C:/digitalWorkspace/lab7/to1Hz.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym to1Hz C:/digitalWorkspace/lab7/to1Hz.sch C:/digitalWorkspace/lab7/to1Hz.sym 

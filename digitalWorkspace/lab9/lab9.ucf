@@ -1,0 +1,33 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "a[7]" LOC = P55;
+NET "a[6]" LOC = P56;
+NET "a[5]" LOC = P57;
+NET "a[4]" LOC = P58;
+NET "a[3]" LOC = P59;
+NET "a[2]" LOC = P61;
+NET "a[1]" LOC = P62;
+NET "a[0]" LOC = P66;
+NET "b[7]" LOC = P112;
+NET "b[6]" LOC = P111;
+NET "b[5]" LOC = P105;
+NET "b[4]" LOC = P104;
+NET "b[3]" LOC = P102;
+NET "b[2]" LOC = P101;
+NET "b[1]" LOC = P100;
+NET "b[0]" LOC = P99;
+NET "com[1]" LOC = P43;
+NET "com[0]" LOC = P44;
+NET "segment[6]" LOC = P27;
+NET "segment[0]" LOC = P41;
+NET "segment[1]" LOC = P40;
+NET "segment[2]" LOC = P35;
+NET "segment[3]" LOC = P34;
+NET "segment[4]" LOC = P32;
+NET "segment[5]" LOC = P29;
+NET "P123" LOC = P123;
+NET "plusPB1" LOC = P45;
+NET "shlPB4" LOC = P46;
+NET "subPB2" LOC = P47;
+NET "xxorPB3" LOC = P48;

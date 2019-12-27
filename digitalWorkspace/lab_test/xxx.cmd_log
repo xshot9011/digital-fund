@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym xxx C:/digitalWorkspace/lab_test/xxx.sch C:/digitalWorkspace/lab_test/xxx.sym 

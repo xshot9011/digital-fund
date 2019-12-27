@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -refsym bcdToHexDecoder C:/digitalWorkspace/lab8/bcdToHexDecoder.sch C:/digitalWorkspace/lab8/bcdToHexDecoder.sym 
+sch2sym -intstyle ise -family spartan6 -refsym bcdToHexDecoder C:/digitalWorkspace/lab8/bcdToHexDecoder.sch C:/digitalWorkspace/lab8/bcdToHexDecoder.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym bcdToHexDecoder C:/digitalWorkspace/lab8/bcdToHexDecoder.sch C:/digitalWorkspace/lab8/bcdToHexDecoder.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym bcdToHexDecoder C:/digitalWorkspace/lab8/bcdToHexDecoder.sch C:/digitalWorkspace/lab8/bcdToHexDecoder.sym 

@@ -1,0 +1,4 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab6/frequencyDevider.vf,-w,C:/digitalWorkspace/lab6/frequencyDevider.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab6/testDividerAndCounterLED.vf,-w,C:/digitalWorkspace/lab6/testDividerAndCounterLED.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab6/multiCounter.vf,-w,C:/digitalWorkspace/lab6/multiCounter.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab6/testDividerAndCounterLED.vf,-w,C:/digitalWorkspace/lab6/testDividerAndCounterLED.sch

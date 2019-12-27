@@ -1,0 +1,128 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counter05.vf
+// /___/   /\     Timestamp : 10/23/2019 09:48:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab7/counter05.vf -w C:/digitalWorkspace/lab7/counter05.sch
+//Design Name: counter05
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_counter05(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counter05(CLEAR, 
+                 CLOCK, 
+                 bit, 
+                 FIVE);
+
+    input CLEAR;
+    input CLOCK;
+   output [3:0] bit;
+   output FIVE;
+   
+   wire XLXN_3;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_24;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_55;
+   wire XLXN_57;
+   
+   (* HU_SET = "XLXI_1_38" *) 
+   FJKC_HXILINX_counter05  XLXI_1 (.C(CLOCK), 
+                                  .CLR(CLEAR), 
+                                  .J(XLXN_24), 
+                                  .K(XLXN_24), 
+                                  .Q(XLXN_30));
+   (* HU_SET = "XLXI_2_37" *) 
+   FJKC_HXILINX_counter05  XLXI_2 (.C(CLOCK), 
+                                  .CLR(CLEAR), 
+                                  .J(XLXN_15), 
+                                  .K(XLXN_30), 
+                                  .Q(XLXN_31));
+   (* HU_SET = "XLXI_3_36" *) 
+   FJKC_HXILINX_counter05  XLXI_3 (.C(CLOCK), 
+                                  .CLR(CLEAR), 
+                                  .J(XLXN_3), 
+                                  .K(XLXN_30), 
+                                  .Q(XLXN_12));
+   AND2  XLXI_4 (.I0(XLXN_31), 
+                .I1(XLXN_30), 
+                .O(XLXN_3));
+   AND2  XLXI_5 (.I0(XLXN_30), 
+                .I1(XLXN_13), 
+                .O(XLXN_15));
+   INV  XLXI_6 (.I(XLXN_12), 
+               .O(XLXN_13));
+   VCC  XLXI_13 (.P(XLXN_24));
+   BUF  XLXI_14 (.I(XLXN_30), 
+                .O(bit[0]));
+   BUF  XLXI_15 (.I(XLXN_31), 
+                .O(bit[1]));
+   BUF  XLXI_16 (.I(XLXN_12), 
+                .O(bit[2]));
+   GND  XLXI_17 (.G(bit[3]));
+   BUF  XLXI_19 (.I(XLXN_12), 
+                .O(XLXN_38));
+   BUF  XLXI_20 (.I(XLXN_30), 
+                .O(XLXN_39));
+   AND3  XLXI_21 (.I0(XLXN_39), 
+                 .I1(XLXN_38), 
+                 .I2(XLXN_55), 
+                 .O(FIVE));
+   INV  XLXI_22 (.I(XLXN_31), 
+                .O(XLXN_57));
+   BUF  XLXI_23 (.I(XLXN_57), 
+                .O(XLXN_55));
+endmodule

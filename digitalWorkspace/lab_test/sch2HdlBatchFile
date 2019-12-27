@@ -1,0 +1,4 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/digitalWorkspace/lab_test/test.vhf,-w,C:/digitalWorkspace/lab_test/test.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/digitalWorkspace/lab_test/to_1_2_10_100_1000Hz.vhf,-w,C:/digitalWorkspace/lab_test/to_1_2_10_100_1000Hz.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/digitalWorkspace/lab_test/bcdToHexDecoder.vhf,-w,C:/digitalWorkspace/lab_test/bcdToHexDecoder.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-flat,-suppress,-vhdl,C:/digitalWorkspace/lab_test/myMultiplexer.vhf,-w,C:/digitalWorkspace/lab_test/myMultiplexer.sch

@@ -1,0 +1,4 @@
+vhdl work "to_1_2_10_100_1000Hz.vhf"
+vhdl work "myMultiplexer.vhf"
+vhdl work "bcdToHexDecoder.vhf"
+vhdl work "test.vhf"

@@ -1,0 +1,170 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o test_map.ncd test.ngd test.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Nov 25 10:57:28 2019
+
+Design Summary
+--------------
+Number of errors   :  20
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:MapLib:979 - LUT2 symbol "XLXI_4/counter_0_rstpot" (output
+   signal=XLXI_4/counter_0_rstpot) has input signal "XLXI_4/enable" which will
+   be trimmed. See Section 5 of the Map Report File for details about why the
+   input signal will become undriven.
+ERROR:MapLib:979 - LUT5 symbol "XLXI_4/counter_1_rstpot" (output
+   signal=XLXI_4/counter_1_rstpot) has input signal "XLXI_4/enable" which will
+   be trimmed. See Section 5 of the Map Report File for details about why the
+   input signal will become undriven.
+ERROR:MapLib:979 - LUT5 symbol "XLXI_4/counter_2_rstpot1" (output
+   signal=XLXI_4/counter_2_rstpot1) has input signal "XLXI_4/enable" which will
+   be trimmed. See Section 5 of the Map Report File for details about why the
+   input signal will become undriven.
+ERROR:MapLib:979 - LUT5 symbol "XLXI_4/counter_3_rstpot1" (output
+   signal=XLXI_4/counter_3_rstpot1) has input signal "XLXI_4/enable" which will
+   be trimmed. See Section 5 of the Map Report File for details about why the
+   input signal will become undriven.
+ERROR:MapLib:979 - LUT4 symbol "XLXI_4/led_0_rstpot" (output
+   signal=XLXI_4/led_0_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:979 - LUT6 symbol "XLXI_4/led_1_rstpot" (output
+   signal=XLXI_4/led_1_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:979 - LUT6 symbol "XLXI_4/led_2_rstpot" (output
+   signal=XLXI_4/led_2_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:979 - LUT5 symbol "XLXI_4/led_3_rstpot" (output
+   signal=XLXI_4/led_3_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:979 - LUT6 symbol "XLXI_4/led_4_rstpot" (output
+   signal=XLXI_4/led_4_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:979 - LUT6 symbol "XLXI_4/led_5_rstpot" (output
+   signal=XLXI_4/led_5_rstpot) has input signal "XLXI_4/enable" which will be
+   trimmed. See Section 5 of the Map Report File for details about why the input
+   signal will become undriven.
+ERROR:MapLib:978 - LUT2 symbol "XLXI_4/counter_0_rstpot" (output
+   signal=XLXI_4/counter_0_rstpot) has an equation that uses input pin I0, which
+   no longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT5 symbol "XLXI_4/counter_1_rstpot" (output
+   signal=XLXI_4/counter_1_rstpot) has an equation that uses input pin I0, which
+   no longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT5 symbol "XLXI_4/counter_2_rstpot1" (output
+   signal=XLXI_4/counter_2_rstpot1) has an equation that uses input pin I0,
+   which no longer has a connected signal. Please ensure that all the pins used
+   in the equation for this LUT have signals that are not trimmed (see Section 5
+   of the Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT5 symbol "XLXI_4/counter_3_rstpot1" (output
+   signal=XLXI_4/counter_3_rstpot1) has an equation that uses input pin I0,
+   which no longer has a connected signal. Please ensure that all the pins used
+   in the equation for this LUT have signals that are not trimmed (see Section 5
+   of the Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT4 symbol "XLXI_4/led_0_rstpot" (output
+   signal=XLXI_4/led_0_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT6 symbol "XLXI_4/led_1_rstpot" (output
+   signal=XLXI_4/led_1_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT6 symbol "XLXI_4/led_2_rstpot" (output
+   signal=XLXI_4/led_2_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT5 symbol "XLXI_4/led_3_rstpot" (output
+   signal=XLXI_4/led_3_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT6 symbol "XLXI_4/led_4_rstpot" (output
+   signal=XLXI_4/led_4_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+ERROR:MapLib:978 - LUT6 symbol "XLXI_4/led_5_rstpot" (output
+   signal=XLXI_4/led_5_rstpot) has an equation that uses input pin I0, which no
+   longer has a connected signal. Please ensure that all the pins used in the
+   equation for this LUT have signals that are not trimmed (see Section 5 of the
+   Map Report File for details on which signals were trimmed).
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  11 block(s) removed
+   2 block(s) optimized away
+   7 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_3/XLXI_69" (BUF) removed.
+Loadless block "XLXI_3/XLXI_70" (BUF) removed.
+ The signal "XLXI_3/XLXN_217" is loadless and has been removed.
+  Loadless block "XLXI_3/XLXI_137/q_tmp" (FF) removed.
+   The signal "XLXI_3/XLXI_137/q_tmp_q_tmp_MUX_8_o" is loadless and has been
+removed.
+    Loadless block "XLXI_3/XLXI_137/Mmux_q_tmp_q_tmp_MUX_8_o11_INV_0" (BUF) removed.
+Loadless block "XLXI_3/XLXI_71" (BUF) removed.
+ The signal "XLXI_3/XLXN_233" is loadless and has been removed.
+  Loadless block "XLXI_3/XLXI_138/q_tmp" (FF) removed.
+   The signal "XLXI_3/XLXI_138/q_tmp_q_tmp_MUX_8_o" is loadless and has been
+removed.
+    Loadless block "XLXI_3/XLXI_138/Mmux_q_tmp_q_tmp_MUX_8_o11_INV_0" (BUF) removed.
+Loadless block "XLXI_3/XLXI_72" (BUF) removed.
+ The signal "XLXI_3/XLXN_239" is loadless and has been removed.
+  Loadless block "XLXI_3/XLXI_139/q_tmp" (FF) removed.
+   The signal "XLXI_3/XLXI_139/q_tmp_q_tmp_MUX_8_o" is loadless and has been
+removed.
+    Loadless block "XLXI_3/XLXI_139/Mmux_q_tmp_q_tmp_MUX_8_o11_INV_0" (BUF) removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "XLXI_4/enable" is unused and has been removed.
+ Unused block "XLXI_4/enable" (LATCH) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC

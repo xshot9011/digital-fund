@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym sub_8bit_2complement C:/digitalWorkspace/lab9/sub_8bit_2complement.sch C:/digitalWorkspace/lab9/sub_8bit_2complement.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym sub_8bit_2complement C:/digitalWorkspace/lab9/sub_8bit_2complement.sch C:/digitalWorkspace/lab9/sub_8bit_2complement.sym 

@@ -1,0 +1,257 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml lab9.twx lab9.ncd -o lab9.twr lab9.pcf -ucf lab9.ucf
+
+Design file:              lab9.ncd
+Physical constraint file: lab9.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock shlPB4 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+segment<0>  |        18.243(R)|      SLOW  |         8.940(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<1>  |        17.801(R)|      SLOW  |         8.690(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<2>  |        17.271(R)|      SLOW  |         8.343(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<3>  |        18.497(R)|      SLOW  |         8.722(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<4>  |        17.309(R)|      SLOW  |         8.414(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<5>  |        17.126(R)|      SLOW  |         8.024(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+segment<6>  |        17.397(R)|      SLOW  |         7.900(R)|      FAST  |shlPB4_BUFGP      |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock subPB2 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+segment<0>  |        19.091(R)|      SLOW  |         9.858(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<1>  |        18.649(R)|      SLOW  |         9.761(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<2>  |        18.119(R)|      SLOW  |         9.203(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<3>  |        19.345(R)|      SLOW  |         9.793(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<4>  |        18.157(R)|      SLOW  |         9.321(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<5>  |        17.974(R)|      SLOW  |         8.972(R)|      FAST  |subPB2_BUFGP      |   0.000|
+segment<6>  |        18.245(R)|      SLOW  |         8.875(R)|      FAST  |subPB2_BUFGP      |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock xxorPB3 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+segment<0>  |        19.025(R)|      SLOW  |         9.781(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<1>  |        18.583(R)|      SLOW  |         9.531(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<2>  |        18.082(R)|      SLOW  |         9.184(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<3>  |        19.279(R)|      SLOW  |         9.563(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<4>  |        18.091(R)|      SLOW  |         9.255(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<5>  |        17.908(R)|      SLOW  |         8.865(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+segment<6>  |        18.179(R)|      SLOW  |         8.741(R)|      FAST  |xxorPB3_BUFGP     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock P123
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+P123           |    1.347|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock plusPB1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+plusPB1        |    0.881|         |         |         |
+shlPB4         |    2.106|         |         |         |
+subPB2         |    2.575|         |         |         |
+xxorPB3        |    2.814|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock shlPB4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+plusPB1        |    3.032|         |         |         |
+shlPB4         |    0.895|         |         |         |
+subPB2         |    2.873|         |         |         |
+xxorPB3        |    3.505|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock subPB2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+plusPB1        |    2.810|         |         |         |
+shlPB4         |    2.197|         |         |         |
+subPB2         |    0.996|         |         |         |
+xxorPB3        |    2.921|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock xxorPB3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+plusPB1        |    2.385|         |         |         |
+shlPB4         |    1.798|         |         |         |
+subPB2         |    2.281|         |         |         |
+xxorPB3        |    0.887|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |segment<0>     |   17.463|
+a<0>           |segment<1>     |   17.021|
+a<0>           |segment<2>     |   16.705|
+a<0>           |segment<3>     |   17.717|
+a<0>           |segment<4>     |   16.529|
+a<0>           |segment<5>     |   16.346|
+a<0>           |segment<6>     |   16.617|
+a<1>           |segment<0>     |   17.482|
+a<1>           |segment<1>     |   17.040|
+a<1>           |segment<2>     |   16.724|
+a<1>           |segment<3>     |   17.736|
+a<1>           |segment<4>     |   16.548|
+a<1>           |segment<5>     |   16.365|
+a<1>           |segment<6>     |   16.636|
+a<2>           |segment<0>     |   17.583|
+a<2>           |segment<1>     |   17.141|
+a<2>           |segment<2>     |   16.825|
+a<2>           |segment<3>     |   17.837|
+a<2>           |segment<4>     |   16.649|
+a<2>           |segment<5>     |   16.466|
+a<2>           |segment<6>     |   16.737|
+a<3>           |segment<0>     |   16.540|
+a<3>           |segment<1>     |   16.098|
+a<3>           |segment<2>     |   15.782|
+a<3>           |segment<3>     |   16.794|
+a<3>           |segment<4>     |   15.606|
+a<3>           |segment<5>     |   15.423|
+a<3>           |segment<6>     |   15.694|
+a<4>           |segment<0>     |   16.063|
+a<4>           |segment<1>     |   15.621|
+a<4>           |segment<2>     |   15.226|
+a<4>           |segment<3>     |   16.317|
+a<4>           |segment<4>     |   15.030|
+a<4>           |segment<5>     |   14.847|
+a<4>           |segment<6>     |   15.118|
+a<5>           |segment<0>     |   15.324|
+a<5>           |segment<1>     |   14.882|
+a<5>           |segment<2>     |   14.487|
+a<5>           |segment<3>     |   15.578|
+a<5>           |segment<4>     |   14.291|
+a<5>           |segment<5>     |   14.108|
+a<5>           |segment<6>     |   14.379|
+a<6>           |segment<0>     |   16.424|
+a<6>           |segment<1>     |   15.982|
+a<6>           |segment<2>     |   15.587|
+a<6>           |segment<3>     |   16.678|
+a<6>           |segment<4>     |   14.735|
+a<6>           |segment<5>     |   15.014|
+a<6>           |segment<6>     |   15.388|
+a<7>           |segment<0>     |   15.075|
+a<7>           |segment<1>     |   14.633|
+a<7>           |segment<2>     |   14.238|
+a<7>           |segment<3>     |   15.329|
+a<7>           |segment<4>     |   13.382|
+a<7>           |segment<5>     |   13.665|
+a<7>           |segment<6>     |   14.039|
+b<0>           |segment<0>     |   17.543|
+b<0>           |segment<1>     |   17.101|
+b<0>           |segment<2>     |   16.785|
+b<0>           |segment<3>     |   17.797|
+b<0>           |segment<4>     |   16.609|
+b<0>           |segment<5>     |   16.426|
+b<0>           |segment<6>     |   16.697|
+b<1>           |segment<0>     |   17.359|
+b<1>           |segment<1>     |   16.917|
+b<1>           |segment<2>     |   16.601|
+b<1>           |segment<3>     |   17.613|
+b<1>           |segment<4>     |   16.425|
+b<1>           |segment<5>     |   16.242|
+b<1>           |segment<6>     |   16.513|
+b<2>           |segment<0>     |   17.626|
+b<2>           |segment<1>     |   17.184|
+b<2>           |segment<2>     |   16.868|
+b<2>           |segment<3>     |   17.880|
+b<2>           |segment<4>     |   16.692|
+b<2>           |segment<5>     |   16.509|
+b<2>           |segment<6>     |   16.780|
+b<3>           |segment<0>     |   17.275|
+b<3>           |segment<1>     |   16.833|
+b<3>           |segment<2>     |   16.517|
+b<3>           |segment<3>     |   17.529|
+b<3>           |segment<4>     |   16.341|
+b<3>           |segment<5>     |   16.158|
+b<3>           |segment<6>     |   16.429|
+b<4>           |segment<0>     |   16.054|
+b<4>           |segment<1>     |   15.612|
+b<4>           |segment<2>     |   15.217|
+b<4>           |segment<3>     |   16.308|
+b<4>           |segment<4>     |   15.021|
+b<4>           |segment<5>     |   14.838|
+b<4>           |segment<6>     |   15.109|
+b<5>           |segment<0>     |   15.889|
+b<5>           |segment<1>     |   15.447|
+b<5>           |segment<2>     |   15.052|
+b<5>           |segment<3>     |   16.143|
+b<5>           |segment<4>     |   14.856|
+b<5>           |segment<5>     |   14.673|
+b<5>           |segment<6>     |   14.944|
+b<6>           |segment<0>     |   16.322|
+b<6>           |segment<1>     |   15.880|
+b<6>           |segment<2>     |   15.485|
+b<6>           |segment<3>     |   16.576|
+b<6>           |segment<4>     |   14.633|
+b<6>           |segment<5>     |   14.912|
+b<6>           |segment<6>     |   15.286|
+b<7>           |segment<0>     |   15.492|
+b<7>           |segment<1>     |   15.050|
+b<7>           |segment<2>     |   14.655|
+b<7>           |segment<3>     |   15.746|
+b<7>           |segment<4>     |   13.799|
+b<7>           |segment<5>     |   14.082|
+b<7>           |segment<6>     |   14.456|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 11 12:19:04 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

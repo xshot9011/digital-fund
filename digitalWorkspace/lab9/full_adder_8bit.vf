@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : full_adder_8bit.vf
+// /___/   /\     Timestamp : 11/11/2019 11:55:26
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab9/full_adder_8bit.vf -w C:/digitalWorkspace/lab9/full_adder_8bit.sch
+//Design Name: full_adder_8bit
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module ADD4_HXILINX_full_adder_8bit (CO, OFL, S0, S1, S2, S3, A0, A1, A2, A3, B0, B1, B2, B3 , CI);
+   
+   output      CO;
+   output      OFL;
+   output      S0;
+   output      S1;
+   output      S2;
+   output      S3;
+
+   input       A0;
+   input       A1;
+   input       A2;
+   input       A3;
+   input       B0;
+   input       B1;
+   input       B2;
+   input       B3;
+   input       CI;
+
+
+   assign   {CO, S3, S2, S1, S0} = {A3, A2, A1, A0} + {B3, B2, B1, B0} + CI;
+   assign   OFL = (A3 & B3 & (~S3)) | ((~A3) & (~B3) & S3); 
+   
+endmodule
+`timescale 1ns / 1ps
+
+module full_adder_8bit(a, 
+                       b, 
+                       o);
+
+    input [7:0] a;
+    input [7:0] b;
+   output [7:0] o;
+   
+   wire XLXN_17;
+   
+   (* HU_SET = "XLXI_6_0" *) 
+   ADD4_HXILINX_full_adder_8bit  XLXI_6 (.A0(a[0]), 
+                                        .A1(a[1]), 
+                                        .A2(a[2]), 
+                                        .A3(a[3]), 
+                                        .B0(b[0]), 
+                                        .B1(b[1]), 
+                                        .B2(b[2]), 
+                                        .B3(b[3]), 
+                                        .CI(), 
+                                        .CO(XLXN_17), 
+                                        .OFL(), 
+                                        .S0(o[0]), 
+                                        .S1(o[1]), 
+                                        .S2(o[2]), 
+                                        .S3(o[3]));
+   (* HU_SET = "XLXI_7_1" *) 
+   ADD4_HXILINX_full_adder_8bit  XLXI_7 (.A0(a[4]), 
+                                        .A1(a[5]), 
+                                        .A2(a[6]), 
+                                        .A3(a[7]), 
+                                        .B0(b[4]), 
+                                        .B1(b[5]), 
+                                        .B2(b[6]), 
+                                        .B3(b[7]), 
+                                        .CI(XLXN_17), 
+                                        .CO(), 
+                                        .OFL(), 
+                                        .S0(o[4]), 
+                                        .S1(o[5]), 
+                                        .S2(o[6]), 
+                                        .S3(o[7]));
+endmodule

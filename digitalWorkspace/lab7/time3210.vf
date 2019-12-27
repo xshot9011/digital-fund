@@ -1,0 +1,242 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : time3210.vf
+// /___/   /\     Timestamp : 10/23/2019 09:48:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab7/time3210.vf -w C:/digitalWorkspace/lab7/time3210.sch
+//Design Name: time3210
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_time3210(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counter05_MUSER_time3210(CLEAR, 
+                                CLOCK, 
+                                bit, 
+                                FIVE);
+
+    input CLEAR;
+    input CLOCK;
+   output [3:0] bit;
+   output FIVE;
+   
+   wire XLXN_3;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   wire XLXN_24;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_55;
+   wire XLXN_57;
+   
+   (* HU_SET = "XLXI_1_41" *) 
+   FJKC_HXILINX_time3210  XLXI_1 (.C(CLOCK), 
+                                 .CLR(CLEAR), 
+                                 .J(XLXN_24), 
+                                 .K(XLXN_24), 
+                                 .Q(XLXN_30));
+   (* HU_SET = "XLXI_2_40" *) 
+   FJKC_HXILINX_time3210  XLXI_2 (.C(CLOCK), 
+                                 .CLR(CLEAR), 
+                                 .J(XLXN_15), 
+                                 .K(XLXN_30), 
+                                 .Q(XLXN_31));
+   (* HU_SET = "XLXI_3_39" *) 
+   FJKC_HXILINX_time3210  XLXI_3 (.C(CLOCK), 
+                                 .CLR(CLEAR), 
+                                 .J(XLXN_3), 
+                                 .K(XLXN_30), 
+                                 .Q(XLXN_12));
+   AND2  XLXI_4 (.I0(XLXN_31), 
+                .I1(XLXN_30), 
+                .O(XLXN_3));
+   AND2  XLXI_5 (.I0(XLXN_30), 
+                .I1(XLXN_13), 
+                .O(XLXN_15));
+   INV  XLXI_6 (.I(XLXN_12), 
+               .O(XLXN_13));
+   VCC  XLXI_13 (.P(XLXN_24));
+   BUF  XLXI_14 (.I(XLXN_30), 
+                .O(bit[0]));
+   BUF  XLXI_15 (.I(XLXN_31), 
+                .O(bit[1]));
+   BUF  XLXI_16 (.I(XLXN_12), 
+                .O(bit[2]));
+   GND  XLXI_17 (.G(bit[3]));
+   BUF  XLXI_19 (.I(XLXN_12), 
+                .O(XLXN_38));
+   BUF  XLXI_20 (.I(XLXN_30), 
+                .O(XLXN_39));
+   AND3  XLXI_21 (.I0(XLXN_39), 
+                 .I1(XLXN_38), 
+                 .I2(XLXN_55), 
+                 .O(FIVE));
+   INV  XLXI_22 (.I(XLXN_31), 
+                .O(XLXN_57));
+   BUF  XLXI_23 (.I(XLXN_57), 
+                .O(XLXN_55));
+endmodule
+`timescale 1ns / 1ps
+
+module counter09_MUSER_time3210(clear, 
+                                CLOCK, 
+                                bit, 
+                                NINE);
+
+    input clear;
+   (* CLOCK_DEDICATED_ROUTE = "TRUE" *) 
+    input CLOCK;
+   output [3:0] bit;
+   output NINE;
+   
+   wire XLXN_2;
+   wire XLXN_6;
+   wire XLXN_11;
+   wire XLXN_22;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire [3:0] bit_DUMMY;
+   
+   assign bit[3:0] = bit_DUMMY[3:0];
+   (* HU_SET = "XLXI_5_42" *) 
+   FJKC_HXILINX_time3210  XLXI_5 (.C(CLOCK), 
+                                 .CLR(clear), 
+                                 .J(XLXN_2), 
+                                 .K(XLXN_2), 
+                                 .Q(bit_DUMMY[0]));
+   (* HU_SET = "XLXI_6_43" *) 
+   FJKC_HXILINX_time3210  XLXI_6 (.C(CLOCK), 
+                                 .CLR(clear), 
+                                 .J(XLXN_11), 
+                                 .K(bit_DUMMY[0]), 
+                                 .Q(bit_DUMMY[1]));
+   (* HU_SET = "XLXI_7_44" *) 
+   FJKC_HXILINX_time3210  XLXI_7 (.C(CLOCK), 
+                                 .CLR(clear), 
+                                 .J(XLXN_22), 
+                                 .K(XLXN_22), 
+                                 .Q(bit_DUMMY[2]));
+   (* HU_SET = "XLXI_8_45" *) 
+   FJKC_HXILINX_time3210  XLXI_8 (.C(CLOCK), 
+                                 .CLR(clear), 
+                                 .J(XLXN_26), 
+                                 .K(bit_DUMMY[0]), 
+                                 .Q(bit_DUMMY[3]));
+   VCC  XLXI_9 (.P(XLXN_2));
+   AND2  XLXI_10 (.I0(XLXN_6), 
+                 .I1(bit_DUMMY[0]), 
+                 .O(XLXN_11));
+   AND2  XLXI_11 (.I0(bit_DUMMY[0]), 
+                 .I1(bit_DUMMY[1]), 
+                 .O(XLXN_22));
+   AND3  XLXI_12 (.I0(bit_DUMMY[2]), 
+                 .I1(bit_DUMMY[1]), 
+                 .I2(bit_DUMMY[0]), 
+                 .O(XLXN_26));
+   INV  XLXI_13 (.I(bit_DUMMY[3]), 
+                .O(XLXN_6));
+   BUF  XLXI_14 (.I(bit_DUMMY[0]), 
+                .O(XLXN_27));
+   BUF  XLXI_15 (.I(bit_DUMMY[3]), 
+                .O(XLXN_28));
+   AND2  XLXI_16 (.I0(XLXN_27), 
+                 .I1(XLXN_28), 
+                 .O(NINE));
+endmodule
+`timescale 1ns / 1ps
+
+module time3210(CLOCK, 
+                XLXN_49, 
+                timerCom0, 
+                timerCom1, 
+                timerCom2, 
+                timerCom3);
+
+    input CLOCK;
+    input XLXN_49;
+   output [3:0] timerCom0;
+   output [3:0] timerCom1;
+   output [3:0] timerCom2;
+   output [3:0] timerCom3;
+   
+   wire XLXN_29;
+   wire XLXN_31;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_51;
+   
+   counter05_MUSER_time3210  XLXI_1 (.CLEAR(XLXN_49), 
+                                    .CLOCK(XLXN_29), 
+                                    .bit(timerCom1[3:0]), 
+                                    .FIVE(XLXN_31));
+   counter09_MUSER_time3210  XLXI_2 (.clear(XLXN_49), 
+                                    .CLOCK(CLOCK), 
+                                    .bit(timerCom0[3:0]), 
+                                    .NINE(XLXN_35));
+   counter09_MUSER_time3210  XLXI_3 (.clear(XLXN_49), 
+                                    .CLOCK(XLXN_51), 
+                                    .bit(timerCom2[3:0]), 
+                                    .NINE(XLXN_33));
+   counter09_MUSER_time3210  XLXI_4 (.clear(XLXN_49), 
+                                    .CLOCK(XLXN_34), 
+                                    .bit(timerCom3[3:0]), 
+                                    .NINE());
+   INV  XLXI_5 (.I(XLXN_35), 
+               .O(XLXN_29));
+   INV  XLXI_6 (.I(XLXN_31), 
+               .O(XLXN_51));
+   INV  XLXI_7 (.I(XLXN_33), 
+               .O(XLXN_34));
+endmodule

@@ -1,0 +1,3 @@
+MODULE schematic
+	SUBMODULE decoder7segment
+		INSTANCE XLXI_77

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym myMultiplexer C:/digitalWorkspace/fire_around/myMultiplexer.sch C:/digitalWorkspace/fire_around/myMultiplexer.sym 

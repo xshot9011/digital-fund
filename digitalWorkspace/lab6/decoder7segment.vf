@@ -1,0 +1,127 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : decoder7segment.vf
+// /___/   /\     Timestamp : 10/10/2019 22:04:38
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab6/decoder7segment.vf -w C:/digitalWorkspace/lab6/decoder7segment.sch
+//Design Name: decoder7segment
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module decoder7segment(aa, 
+                       bb, 
+                       cc, 
+                       dd, 
+                       a, 
+                       b, 
+                       c, 
+                       d, 
+                       e, 
+                       f, 
+                       g);
+
+    input aa;
+    input bb;
+    input cc;
+    input dd;
+   output a;
+   output b;
+   output c;
+   output d;
+   output e;
+   output f;
+   output g;
+   
+   wire XLXN_87;
+   wire XLXN_91;
+   wire XLXN_92;
+   wire XLXN_97;
+   wire XLXN_101;
+   wire XLXN_104;
+   wire XLXN_106;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire XLXN_111;
+   wire XLXN_113;
+   wire XLXN_114;
+   
+   AND2  BbC (.I0(cc), 
+             .I1(XLXN_87), 
+             .O(XLXN_104));
+   AND2  BbDb (.I0(XLXN_91), 
+              .I1(XLXN_87), 
+              .O(XLXN_107));
+   AND2  BCb (.I0(XLXN_92), 
+             .I1(bb), 
+             .O(XLXN_113));
+   AND2  BCbD (.I0(XLXN_113), 
+              .I1(dd), 
+              .O(XLXN_106));
+   AND2  BD (.I0(dd), 
+            .I1(bb), 
+            .O(XLXN_97));
+   AND2  BDb (.I0(XLXN_91), 
+             .I1(bb), 
+             .O(XLXN_114));
+   AND2  CbDb (.I0(XLXN_91), 
+              .I1(XLXN_92), 
+              .O(XLXN_111));
+   AND2  CD (.I0(dd), 
+            .I1(cc), 
+            .O(XLXN_101));
+   AND2  CDb (.I0(XLXN_91), 
+             .I1(cc), 
+             .O(XLXN_108));
+   INV  XLXI_1 (.I(aa), 
+               .O());
+   INV  XLXI_2 (.I(bb), 
+               .O(XLXN_87));
+   INV  XLXI_3 (.I(cc), 
+               .O(XLXN_92));
+   INV  XLXI_4 (.I(dd), 
+               .O(XLXN_91));
+   OR4  XLXI_5 (.I0(XLXN_107), 
+               .I1(XLXN_97), 
+               .I2(cc), 
+               .I3(aa), 
+               .O(a));
+   OR3  XLXI_7 (.I0(XLXN_111), 
+               .I1(XLXN_101), 
+               .I2(XLXN_87), 
+               .O(b));
+   OR3  XLXI_11 (.I0(dd), 
+                .I1(XLXN_92), 
+                .I2(bb), 
+                .O(c));
+   OR5  XLXI_14 (.I0(XLXN_106), 
+                .I1(XLXN_108), 
+                .I2(XLXN_107), 
+                .I3(XLXN_104), 
+                .I4(aa), 
+                .O(d));
+   OR2  XLXI_15 (.I0(XLXN_108), 
+                .I1(XLXN_107), 
+                .O(e));
+   OR4  XLXI_16 (.I0(XLXN_111), 
+                .I1(XLXN_113), 
+                .I2(XLXN_114), 
+                .I3(aa), 
+                .O(f));
+   OR4  XLXI_17 (.I0(XLXN_114), 
+                .I1(XLXN_104), 
+                .I2(XLXN_113), 
+                .I3(aa), 
+                .O(g));
+endmodule

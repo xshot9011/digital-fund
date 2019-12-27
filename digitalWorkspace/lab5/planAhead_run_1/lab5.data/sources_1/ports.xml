@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="CLEAR" Dir="IN"/>
+		<Port Id="CLOCK" Dir="IN"/>
+		<Port Id="b" Dir="OUT"/>
+		<Port Id="c" Dir="OUT"/>
+		<Port Id="COMMON0" Dir="OUT"/>
+		<Port Id="d" Dir="OUT"/>
+		<Port Id="XLXN_207" Dir="OUT"/>
+		<Port Id="XLXN_208" Dir="OUT"/>
+		<Port Id="XLXN_209" Dir="OUT"/>
+		<Port Id="XLXN_210" Dir="OUT"/>
+		<Port Id="XLXN_211" Dir="OUT"/>
+		<Port Id="XLXN_212" Dir="OUT"/>
+		<Port Id="XLXN_213" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

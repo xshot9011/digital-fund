@@ -1,0 +1,9 @@
+MODULE testDividerAndCounterLED
+	SUBMODULE decoder7segment
+		INSTANCE XLXI_3
+	SUBMODULE multiCounter
+		INSTANCE XLXI_6
+	SUBMODULE multiplexer
+		INSTANCE XLXI_14
+	SUBMODULE frequencyDevider
+		INSTANCE XLXI_20

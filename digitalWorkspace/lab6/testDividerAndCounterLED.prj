@@ -1,0 +1,6 @@
+verilog work "counter09.vf"
+verilog work "multiplexer.vf"
+verilog work "multiCounter.vf"
+verilog work "frequencyDevider.vf"
+verilog work "decoder7segment.vf"
+verilog work "testDividerAndCounterLED.vf"

@@ -1,0 +1,14 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2hdl -intstyle ise -family spartan6 -verilog multiplexer_drc.vf -w C:/digitalWorkspace/lab6/multiplexer.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym multiplexer C:/digitalWorkspace/lab6/multiplexer.sch C:/digitalWorkspace/lab6/multiplexer.sym 

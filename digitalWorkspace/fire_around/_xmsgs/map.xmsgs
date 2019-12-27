@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT2 symbol &quot;XLXI_4/counter_0_rstpot&quot; (output signal=XLXI_4/counter_0_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_1_rstpot&quot; (output signal=XLXI_4/counter_1_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_2_rstpot1&quot; (output signal=XLXI_4/counter_2_rstpot1)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_3_rstpot1&quot; (output signal=XLXI_4/counter_3_rstpot1)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;XLXI_4/led_0_rstpot&quot; (output signal=XLXI_4/led_0_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_1_rstpot&quot; (output signal=XLXI_4/led_1_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_2_rstpot&quot; (output signal=XLXI_4/led_2_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/led_3_rstpot&quot; (output signal=XLXI_4/led_3_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_4_rstpot&quot; (output signal=XLXI_4/led_4_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_5_rstpot&quot; (output signal=XLXI_4/led_5_rstpot)</arg> has input signal &quot;<arg fmt="%s" index="2">XLXI_4/enable</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT2 symbol &quot;XLXI_4/counter_0_rstpot&quot; (output signal=XLXI_4/counter_0_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_1_rstpot&quot; (output signal=XLXI_4/counter_1_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_2_rstpot1&quot; (output signal=XLXI_4/counter_2_rstpot1)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/counter_3_rstpot1&quot; (output signal=XLXI_4/counter_3_rstpot1)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;XLXI_4/led_0_rstpot&quot; (output signal=XLXI_4/led_0_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_1_rstpot&quot; (output signal=XLXI_4/led_1_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_2_rstpot&quot; (output signal=XLXI_4/led_2_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT5 symbol &quot;XLXI_4/led_3_rstpot&quot; (output signal=XLXI_4/led_3_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_4_rstpot&quot; (output signal=XLXI_4/led_4_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT6 symbol &quot;XLXI_4/led_5_rstpot&quot; (output signal=XLXI_4/led_5_rstpot)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+</messages>
+

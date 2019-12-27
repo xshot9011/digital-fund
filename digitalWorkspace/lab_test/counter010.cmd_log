@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym counter010 C:/digitalWorkspace/lab_test/counter010.sch C:/digitalWorkspace/lab_test/counter010.sym 

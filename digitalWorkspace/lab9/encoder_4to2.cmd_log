@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym encoder_4to2 C:/digitalWorkspace/lab9/encoder_4to2.sch C:/digitalWorkspace/lab9/encoder_4to2.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym encoder_4to2 C:/digitalWorkspace/lab9/encoder_4to2.sch C:/digitalWorkspace/lab9/encoder_4to2.sym 

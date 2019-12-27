@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\digitalWorkspace\lab5\schematic.ncd
+OUTFILE=C:\digitalWorkspace\lab5\schematic.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=C:\digitalWorkspace\lab5
+LICENSE=WebPack
+USER_INFO=__0_0_0

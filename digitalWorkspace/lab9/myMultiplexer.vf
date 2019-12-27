@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : myMultiplexer.vf
+// /___/   /\     Timestamp : 11/11/2019 11:35:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab9/myMultiplexer.vf -w C:/digitalWorkspace/lab9/myMultiplexer.sch
+//Design Name: myMultiplexer
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M2_1E_HXILINX_myMultiplexer (O, D0, D1, E, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  E;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or E or S0)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case(S0)
+        1'b0 : O <= D0;
+        1'b1 : O <= D1;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module myMultiplexer(bit, 
+                     clock, 
+                     bcd, 
+                     com);
+
+    input [7:0] bit;
+    input clock;
+   output [3:0] bcd;
+   output [1:0] com;
+   
+   wire XLXN_35;
+   
+   (* HU_SET = "XLXI_5_0" *) 
+   M2_1E_HXILINX_myMultiplexer  XLXI_5 (.D0(bit[0]), 
+                                       .D1(bit[4]), 
+                                       .E(XLXN_35), 
+                                       .S0(clock), 
+                                       .O(bcd[0]));
+   BUF  XLXI_8 (.I(clock), 
+               .O(com[0]));
+   INV  XLXI_9 (.I(clock), 
+               .O(com[1]));
+   (* HU_SET = "XLXI_11_1" *) 
+   M2_1E_HXILINX_myMultiplexer  XLXI_11 (.D0(bit[1]), 
+                                        .D1(bit[5]), 
+                                        .E(XLXN_35), 
+                                        .S0(clock), 
+                                        .O(bcd[1]));
+   (* HU_SET = "XLXI_12_2" *) 
+   M2_1E_HXILINX_myMultiplexer  XLXI_12 (.D0(bit[2]), 
+                                        .D1(bit[6]), 
+                                        .E(XLXN_35), 
+                                        .S0(clock), 
+                                        .O(bcd[2]));
+   (* HU_SET = "XLXI_13_3" *) 
+   M2_1E_HXILINX_myMultiplexer  XLXI_13 (.D0(bit[3]), 
+                                        .D1(bit[7]), 
+                                        .E(XLXN_35), 
+                                        .S0(clock), 
+                                        .O(bcd[3]));
+   VCC  XLXI_18 (.P(XLXN_35));
+endmodule

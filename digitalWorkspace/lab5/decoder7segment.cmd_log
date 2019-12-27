@@ -1,0 +1,4 @@
+sch2sym -intstyle ise -family spartan6 -refsym decoder7segment C:/digitalWorkspace/lab6/decoder7segment.sch C:/digitalWorkspace/lab5/decoder7segment.sym 
+sch2sym -intstyle ise -family spartan6 -refsym decoder7segment C:/digitalWorkspace/lab6/decoder7segment.sch C:/digitalWorkspace/lab5/decoder7segment.sym 
+sch2sym -intstyle ise -family spartan6 -refsym decoder7segment C:/digitalWorkspace/lab6/decoder7segment.sch C:/digitalWorkspace/lab5/decoder7segment.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym decoder7segment C:/digitalWorkspace/lab6/decoder7segment.sch C:/digitalWorkspace/lab5/decoder7segment.sym 

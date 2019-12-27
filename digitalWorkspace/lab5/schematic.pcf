@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Oct 07 12:35:22 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN CLOCK_pin<0> = BEL "CLOCK" PINNAME PAD;
+PIN "CLOCK_pin<0>" CLOCK_DEDICATED_ROUTE;
+COMP "COMMON0" LOCATE = SITE "P44" LEVEL 1;
+SCHEMATIC END;
+

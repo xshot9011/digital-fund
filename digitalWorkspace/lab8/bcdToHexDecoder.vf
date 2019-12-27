@@ -1,0 +1,252 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bcdToHexDecoder.vf
+// /___/   /\     Timestamp : 10/28/2019 12:02:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab8/bcdToHexDecoder.vf -w C:/digitalWorkspace/lab8/bcdToHexDecoder.sch
+//Design Name: bcdToHexDecoder
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module OR6_HXILINX_bcdToHexDecoder (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR8_HXILINX_bcdToHexDecoder (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale 1ns / 1ps
+
+module bcdToHexDecoder(bcd, 
+                       bit);
+
+    input [3:0] bcd;
+   output [6:0] bit;
+   
+   wire XLNX;
+   wire XLXN_17;
+   wire XLXN_22;
+   wire XLXN_31;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_73;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_81;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire XLXN_85;
+   wire XLXN_86;
+   wire XLXN_87;
+   wire XLXN_89;
+   wire XLXN_90;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_119;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_122;
+   wire XLXN_123;
+   wire XLXN_133;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_141;
+   
+   AND2  BAb (.I0(XLXN_93), 
+             .I1(bcd[1]), 
+             .O(XLXN_89));
+   AND2  BbAb (.I0(XLXN_93), 
+              .I1(XLXN_133), 
+              .O(XLXN_79));
+   AND2  CAb (.I0(XLXN_93), 
+             .I1(bcd[2]), 
+             .O(XLXN_94));
+   AND2  CB (.I0(bcd[1]), 
+            .I1(bcd[2]), 
+            .O(XLXN_119));
+   AND2  CbAb (.I0(XLXN_93), 
+              .I1(XLXN_81), 
+              .O(XLXN_120));
+   AND2  CBAbn (.I0(XLXN_93), 
+               .I1(XLXN_119), 
+               .O(XLXN_86));
+   AND2  CbB (.I0(bcd[1]), 
+             .I1(XLXN_81), 
+             .O(XLXN_97));
+   AND3  CBbA (.I0(bcd[0]), 
+              .I1(XLXN_133), 
+              .I2(bcd[2]), 
+              .O(XLXN_84));
+   AND2  CbBbAb (.I0(XLXN_79), 
+                .I1(XLXN_81), 
+                .O(XLXN_82));
+   AND2  DA (.I0(bcd[0]), 
+            .I1(bcd[3]), 
+            .O(XLXN_99));
+   AND2  DB (.I0(bcd[1]), 
+            .I1(bcd[3]), 
+            .O(XLXN_92));
+   AND2  DbA (.I0(bcd[0]), 
+             .I1(XLXN_73), 
+             .O(XLXN_22));
+   AND2  DBb (.I0(XLXN_133), 
+             .I1(bcd[3]), 
+             .O(XLXN_35));
+   AND2  DbBA (.I0(bcd[0]), 
+              .I1(XLNX), 
+              .O(XLXN_34));
+   AND2  DBbAb (.I0(XLXN_93), 
+               .I1(XLXN_35), 
+               .O(XLXN_121));
+   AND2  DbBAbn (.I0(XLXN_93), 
+                .I1(XLNX), 
+                .O(XLXN_85));
+   AND2  DBbAn (.I0(bcd[0]), 
+               .I1(XLXN_35), 
+               .O(XLXN_36));
+   AND2  DbBb (.I0(XLXN_133), 
+              .I1(XLXN_73), 
+              .O(XLXN_31));
+   AND2  DbBbAb (.I0(XLXN_93), 
+                .I1(XLXN_31), 
+                .O(XLXN_33));
+   AND2  DbBn (.I0(bcd[1]), 
+              .I1(XLXN_73), 
+              .O(XLNX));
+   AND2  DbC (.I0(bcd[2]), 
+             .I1(XLXN_73), 
+             .O(XLXN_139));
+   AND2  DbCA (.I0(bcd[2]), 
+              .I1(XLXN_22), 
+              .O(XLXN_123));
+   AND2  DbCb (.I0(XLXN_81), 
+              .I1(XLXN_73), 
+              .O(XLXN_78));
+   AND2  DbCbB (.I0(XLXN_81), 
+               .I1(XLNX), 
+               .O(XLXN_83));
+   AND2  DbCBbn (.I0(bcd[2]), 
+                .I1(XLXN_31), 
+                .O(XLXN_98));
+   AND2  DC (.I0(bcd[2]), 
+            .I1(bcd[3]), 
+            .O(XLXN_90));
+   AND2  DCb (.I0(XLXN_81), 
+             .I1(bcd[3]), 
+             .O(XLXN_17));
+   AND2  DCbA (.I0(bcd[0]), 
+              .I1(XLXN_17), 
+              .O(XLXN_87));
+   AND2  DCbBb (.I0(XLXN_133), 
+               .I1(XLXN_17), 
+               .O(XLXN_122));
+   AND2  DCbn (.I0(XLXN_81), 
+              .I1(bcd[3]), 
+              .O(XLXN_140));
+   INV  XLXI_1 (.I(bcd[0]), 
+               .O(XLXN_93));
+   INV  XLXI_2 (.I(bcd[1]), 
+               .O(XLXN_133));
+   INV  XLXI_3 (.I(bcd[2]), 
+               .O(XLXN_81));
+   INV  XLXI_4 (.I(bcd[3]), 
+               .O(XLXN_73));
+   (* HU_SET = "XLXI_21_2" *) 
+   OR6_HXILINX_bcdToHexDecoder  XLXI_21 (.I0(XLXN_119), 
+                                        .I1(XLNX), 
+                                        .I2(XLXN_123), 
+                                        .I3(XLXN_122), 
+                                        .I4(XLXN_121), 
+                                        .I5(XLXN_120), 
+                                        .O(bit[0]));
+   OR5  XLXI_22 (.I0(XLXN_36), 
+                .I1(XLXN_34), 
+                .I2(XLXN_33), 
+                .I3(XLXN_78), 
+                .I4(XLXN_120), 
+                .O(bit[1]));
+   OR4  XLXI_25 (.I0(XLXN_92), 
+                .I1(XLXN_90), 
+                .I2(XLXN_89), 
+                .I3(XLXN_120), 
+                .O(bit[4]));
+   OR5  XLXI_26 (.I0(XLXN_17), 
+                .I1(XLXN_92), 
+                .I2(XLXN_98), 
+                .I3(XLXN_94), 
+                .I4(XLXN_79), 
+                .O(bit[5]));
+   OR5  XLXI_27 (.I0(XLXN_17), 
+                .I1(XLXN_99), 
+                .I2(XLXN_89), 
+                .I3(XLXN_98), 
+                .I4(XLXN_97), 
+                .O(bit[6]));
+   (* HU_SET = "XLXI_28_3" *) 
+   OR8_HXILINX_bcdToHexDecoder  XLXI_28 (.I0(), 
+                                        .I1(XLXN_87), 
+                                        .I2(XLXN_35), 
+                                        .I3(XLXN_86), 
+                                        .I4(XLXN_85), 
+                                        .I5(XLXN_84), 
+                                        .I6(XLXN_83), 
+                                        .I7(XLXN_82), 
+                                        .O(bit[3]));
+   AND4  XLXI_29 (.I0(bcd[0]), 
+                 .I1(XLXN_133), 
+                 .I2(bcd[3]), 
+                 .I3(bcd[2]), 
+                 .O(XLXN_141));
+   OR5  XLXI_30 (.I0(XLXN_141), 
+                .I1(XLXN_140), 
+                .I2(XLXN_139), 
+                .I3(XLXN_22), 
+                .I4(XLXN_31), 
+                .O(bit[2]));
+endmodule

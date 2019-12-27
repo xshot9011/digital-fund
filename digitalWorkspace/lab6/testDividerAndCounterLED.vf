@@ -1,0 +1,632 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : testDividerAndCounterLED.vf
+// /___/   /\     Timestamp : 11/18/2019 12:57:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab6/testDividerAndCounterLED.vf -w C:/digitalWorkspace/lab6/testDividerAndCounterLED.sch
+//Design Name: testDividerAndCounterLED
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP4_HXILINX_testDividerAndCounterLED (EQ, A0, A1, A2, A3, B0, B1, B2, B3);
+    
+
+   output EQ;
+
+   input A0;
+   input A1;
+   input A2;
+   input A3;
+   input B0;
+   input B1;
+   input B2;
+   input B3;
+
+   assign EQ = ((A0==B0) && (A1==B1) && (A2==B2) && (A3==B3)) ;
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_testDividerAndCounterLED(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_testDividerAndCounterLED (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module counter09_MUSER_testDividerAndCounterLED(CLOCK, 
+                                                A, 
+                                                B, 
+                                                C, 
+                                                D);
+
+   (* CLOCK_DEDICATED_ROUTE = "TRUE" *) 
+    input CLOCK;
+   output A;
+   output B;
+   output C;
+   output D;
+   
+   wire XLXN_2;
+   wire XLXN_6;
+   wire XLXN_11;
+   wire XLXN_22;
+   wire XLXN_26;
+   wire A_DUMMY;
+   wire B_DUMMY;
+   wire C_DUMMY;
+   wire D_DUMMY;
+   
+   assign A = A_DUMMY;
+   assign B = B_DUMMY;
+   assign C = C_DUMMY;
+   assign D = D_DUMMY;
+   (* HU_SET = "XLXI_5_31" *) 
+   FJKC_HXILINX_testDividerAndCounterLED  XLXI_5 (.C(CLOCK), 
+                                                 .CLR(), 
+                                                 .J(XLXN_2), 
+                                                 .K(XLXN_2), 
+                                                 .Q(D_DUMMY));
+   (* HU_SET = "XLXI_6_32" *) 
+   FJKC_HXILINX_testDividerAndCounterLED  XLXI_6 (.C(CLOCK), 
+                                                 .CLR(), 
+                                                 .J(XLXN_11), 
+                                                 .K(D_DUMMY), 
+                                                 .Q(C_DUMMY));
+   (* HU_SET = "XLXI_7_33" *) 
+   FJKC_HXILINX_testDividerAndCounterLED  XLXI_7 (.C(CLOCK), 
+                                                 .CLR(), 
+                                                 .J(XLXN_22), 
+                                                 .K(XLXN_22), 
+                                                 .Q(B_DUMMY));
+   (* HU_SET = "XLXI_8_34" *) 
+   FJKC_HXILINX_testDividerAndCounterLED  XLXI_8 (.C(CLOCK), 
+                                                 .CLR(), 
+                                                 .J(XLXN_26), 
+                                                 .K(D_DUMMY), 
+                                                 .Q(A_DUMMY));
+   VCC  XLXI_9 (.P(XLXN_2));
+   AND2  XLXI_10 (.I0(XLXN_6), 
+                 .I1(D_DUMMY), 
+                 .O(XLXN_11));
+   AND2  XLXI_11 (.I0(D_DUMMY), 
+                 .I1(C_DUMMY), 
+                 .O(XLXN_22));
+   AND3  XLXI_12 (.I0(B_DUMMY), 
+                 .I1(C_DUMMY), 
+                 .I2(D_DUMMY), 
+                 .O(XLXN_26));
+   INV  XLXI_13 (.I(A_DUMMY), 
+                .O(XLXN_6));
+endmodule
+`timescale 1ns / 1ps
+
+module multiCounter_MUSER_testDividerAndCounterLED(cl, 
+                                                   increase_one, 
+                                                   sw, 
+                                                   a0, 
+                                                   a1, 
+                                                   b0, 
+                                                   b1, 
+                                                   c0, 
+                                                   c1, 
+                                                   d0, 
+                                                   d1);
+
+    input cl;
+    input increase_one;
+    input sw;
+   output a0;
+   output a1;
+   output b0;
+   output b1;
+   output c0;
+   output c1;
+   output d0;
+   output d1;
+   
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire a0_DUMMY;
+   wire b0_DUMMY;
+   wire c0_DUMMY;
+   wire d0_DUMMY;
+   
+   assign a0 = a0_DUMMY;
+   assign b0 = b0_DUMMY;
+   assign c0 = c0_DUMMY;
+   assign d0 = d0_DUMMY;
+   counter09_MUSER_testDividerAndCounterLED  XLXI_1 (.CLOCK(XLXN_12), 
+                                                    .A(a0_DUMMY), 
+                                                    .B(b0_DUMMY), 
+                                                    .C(c0_DUMMY), 
+                                                    .D(d0_DUMMY));
+   counter09_MUSER_testDividerAndCounterLED  XLXI_2 (.CLOCK(XLXN_8), 
+                                                    .A(a1), 
+                                                    .B(b1), 
+                                                    .C(c1), 
+                                                    .D(d1));
+   (* HU_SET = "XLXI_3_35" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_3 (.A0(a0_DUMMY), 
+                                                  .A1(c0_DUMMY), 
+                                                  .A2(b0_DUMMY), 
+                                                  .A3(d0_DUMMY), 
+                                                  .B0(XLXN_5), 
+                                                  .B1(XLXN_7), 
+                                                  .B2(XLXN_7), 
+                                                  .B3(XLXN_5), 
+                                                  .EQ(XLXN_8));
+   VCC  XLXI_4 (.P(XLXN_5));
+   GND  XLXI_5 (.G(XLXN_7));
+   AND2  XLXI_9 (.I0(cl), 
+                .I1(sw), 
+                .O(XLXN_11));
+   OR2  XLXI_10 (.I0(XLXN_11), 
+                .I1(increase_one), 
+                .O(XLXN_12));
+endmodule
+`timescale 1ns / 1ps
+
+module frequencyDevider_MUSER_testDividerAndCounterLED(CLOCK20M, 
+                                                       clock20);
+
+    input CLOCK20M;
+   output clock20;
+   
+   wire XLXN_539;
+   wire XLXN_540;
+   wire XLXN_541;
+   wire XLXN_542;
+   wire XLXN_568;
+   wire XLXN_569;
+   wire XLXN_571;
+   wire XLXN_585;
+   wire XLXN_587;
+   wire XLXN_589;
+   wire XLXN_591;
+   wire XLXN_592;
+   wire XLXN_593;
+   wire XLXN_594;
+   wire XLXN_596;
+   wire XLXN_598;
+   wire XLXN_600;
+   wire XLXN_602;
+   wire XLXN_603;
+   wire XLXN_604;
+   wire XLXN_605;
+   wire XLXN_607;
+   wire XLXN_609;
+   wire XLXN_611;
+   wire XLXN_613;
+   wire XLXN_614;
+   wire XLXN_615;
+   wire XLXN_617;
+   wire XLXN_619;
+   wire XLXN_621;
+   wire XLXN_623;
+   wire XLXN_625;
+   wire XLXN_627;
+   wire XLXN_640;
+   wire XLXN_644;
+   
+   counter09_MUSER_testDividerAndCounterLED  XLXI_8 (.CLOCK(CLOCK20M), 
+                                                    .A(XLXN_539), 
+                                                    .B(XLXN_541), 
+                                                    .C(XLXN_540), 
+                                                    .D(XLXN_542));
+   (* HU_SET = "XLXI_123_36" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_123 (.A0(XLXN_539), 
+                                                    .A1(XLXN_540), 
+                                                    .A2(XLXN_541), 
+                                                    .A3(XLXN_542), 
+                                                    .B0(XLXN_568), 
+                                                    .B1(XLXN_569), 
+                                                    .B2(XLXN_569), 
+                                                    .B3(XLXN_568), 
+                                                    .EQ(XLXN_571));
+   GND  XLXI_124 (.G(XLXN_569));
+   VCC  XLXI_125 (.P(XLXN_568));
+   counter09_MUSER_testDividerAndCounterLED  XLXI_130 (.CLOCK(XLXN_571), 
+                                                      .A(XLXN_589), 
+                                                      .B(XLXN_587), 
+                                                      .C(XLXN_585), 
+                                                      .D(XLXN_591));
+   (* HU_SET = "XLXI_131_37" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_131 (.A0(XLXN_589), 
+                                                    .A1(XLXN_585), 
+                                                    .A2(XLXN_587), 
+                                                    .A3(XLXN_591), 
+                                                    .B0(XLXN_592), 
+                                                    .B1(XLXN_593), 
+                                                    .B2(XLXN_593), 
+                                                    .B3(XLXN_592), 
+                                                    .EQ(XLXN_594));
+   GND  XLXI_132 (.G(XLXN_593));
+   VCC  XLXI_133 (.P(XLXN_592));
+   counter09_MUSER_testDividerAndCounterLED  XLXI_134 (.CLOCK(XLXN_594), 
+                                                      .A(XLXN_600), 
+                                                      .B(XLXN_598), 
+                                                      .C(XLXN_596), 
+                                                      .D(XLXN_602));
+   (* HU_SET = "XLXI_135_38" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_135 (.A0(XLXN_600), 
+                                                    .A1(XLXN_596), 
+                                                    .A2(XLXN_598), 
+                                                    .A3(XLXN_602), 
+                                                    .B0(XLXN_603), 
+                                                    .B1(XLXN_604), 
+                                                    .B2(XLXN_604), 
+                                                    .B3(XLXN_603), 
+                                                    .EQ(XLXN_605));
+   GND  XLXI_136 (.G(XLXN_604));
+   VCC  XLXI_137 (.P(XLXN_603));
+   counter09_MUSER_testDividerAndCounterLED  XLXI_138 (.CLOCK(XLXN_605), 
+                                                      .A(XLXN_611), 
+                                                      .B(XLXN_609), 
+                                                      .C(XLXN_607), 
+                                                      .D(XLXN_613));
+   (* HU_SET = "XLXI_139_39" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_139 (.A0(XLXN_611), 
+                                                    .A1(XLXN_607), 
+                                                    .A2(XLXN_609), 
+                                                    .A3(XLXN_613), 
+                                                    .B0(XLXN_614), 
+                                                    .B1(XLXN_615), 
+                                                    .B2(XLXN_615), 
+                                                    .B3(XLXN_614), 
+                                                    .EQ(XLXN_617));
+   GND  XLXI_140 (.G(XLXN_615));
+   VCC  XLXI_141 (.P(XLXN_614));
+   counter09_MUSER_testDividerAndCounterLED  XLXI_142 (.CLOCK(XLXN_617), 
+                                                      .A(XLXN_623), 
+                                                      .B(XLXN_621), 
+                                                      .C(XLXN_619), 
+                                                      .D(XLXN_625));
+   (* HU_SET = "XLXI_143_40" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_143 (.A0(XLXN_623), 
+                                                    .A1(XLXN_619), 
+                                                    .A2(XLXN_621), 
+                                                    .A3(XLXN_625), 
+                                                    .B0(XLXN_644), 
+                                                    .B1(XLXN_627), 
+                                                    .B2(XLXN_627), 
+                                                    .B3(XLXN_644), 
+                                                    .EQ(XLXN_640));
+   GND  XLXI_144 (.G(XLXN_627));
+   VCC  XLXI_145 (.P(XLXN_644));
+   (* HU_SET = "XLXI_148_41" *) 
+   FJKC_HXILINX_testDividerAndCounterLED  XLXI_148 (.C(XLXN_640), 
+                                                   .CLR(), 
+                                                   .J(XLXN_644), 
+                                                   .K(XLXN_644), 
+                                                   .Q(clock20));
+endmodule
+`timescale 1ns / 1ps
+
+module multiplexer_MUSER_testDividerAndCounterLED(a0, 
+                                                  a1, 
+                                                  b0, 
+                                                  b1, 
+                                                  CLOCK200, 
+                                                  c0, 
+                                                  c1, 
+                                                  d0, 
+                                                  d1, 
+                                                  a, 
+                                                  b, 
+                                                  c, 
+                                                  d, 
+                                                  G0, 
+                                                  G1);
+
+    input a0;
+    input a1;
+    input b0;
+    input b1;
+    input CLOCK200;
+    input c0;
+    input c1;
+    input d0;
+    input d1;
+   output a;
+   output b;
+   output c;
+   output d;
+   output G0;
+   output G1;
+   
+   
+   (* HU_SET = "XLXI_1_42" *) 
+   M2_1_HXILINX_testDividerAndCounterLED  XLXI_1 (.D0(a0), 
+                                                 .D1(a1), 
+                                                 .S0(CLOCK200), 
+                                                 .O(a));
+   (* HU_SET = "XLXI_2_43" *) 
+   M2_1_HXILINX_testDividerAndCounterLED  XLXI_2 (.D0(b0), 
+                                                 .D1(b1), 
+                                                 .S0(CLOCK200), 
+                                                 .O(b));
+   (* HU_SET = "XLXI_3_44" *) 
+   M2_1_HXILINX_testDividerAndCounterLED  XLXI_3 (.D0(c0), 
+                                                 .D1(c1), 
+                                                 .S0(CLOCK200), 
+                                                 .O(c));
+   (* HU_SET = "XLXI_4_45" *) 
+   M2_1_HXILINX_testDividerAndCounterLED  XLXI_4 (.D0(d0), 
+                                                 .D1(d1), 
+                                                 .S0(CLOCK200), 
+                                                 .O(d));
+   INV  XLXI_37 (.I(CLOCK200), 
+                .O(G1));
+   BUF  XLXI_39 (.I(CLOCK200), 
+                .O(G0));
+endmodule
+`timescale 1ns / 1ps
+
+module decoder7segment_MUSER_testDividerAndCounterLED(aa, 
+                                                      bb, 
+                                                      cc, 
+                                                      dd, 
+                                                      a, 
+                                                      b, 
+                                                      c, 
+                                                      d, 
+                                                      e, 
+                                                      f, 
+                                                      g);
+
+    input aa;
+    input bb;
+    input cc;
+    input dd;
+   output a;
+   output b;
+   output c;
+   output d;
+   output e;
+   output f;
+   output g;
+   
+   wire XLXN_87;
+   wire XLXN_91;
+   wire XLXN_92;
+   wire XLXN_97;
+   wire XLXN_101;
+   wire XLXN_104;
+   wire XLXN_106;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire XLXN_111;
+   wire XLXN_113;
+   wire XLXN_114;
+   
+   AND2  BbC (.I0(cc), 
+             .I1(XLXN_87), 
+             .O(XLXN_104));
+   AND2  BbDb (.I0(XLXN_91), 
+              .I1(XLXN_87), 
+              .O(XLXN_107));
+   AND2  BCb (.I0(XLXN_92), 
+             .I1(bb), 
+             .O(XLXN_113));
+   AND2  BCbD (.I0(XLXN_113), 
+              .I1(dd), 
+              .O(XLXN_106));
+   AND2  BD (.I0(dd), 
+            .I1(bb), 
+            .O(XLXN_97));
+   AND2  BDb (.I0(XLXN_91), 
+             .I1(bb), 
+             .O(XLXN_114));
+   AND2  CbDb (.I0(XLXN_91), 
+              .I1(XLXN_92), 
+              .O(XLXN_111));
+   AND2  CD (.I0(dd), 
+            .I1(cc), 
+            .O(XLXN_101));
+   AND2  CDb (.I0(XLXN_91), 
+             .I1(cc), 
+             .O(XLXN_108));
+   INV  XLXI_1 (.I(aa), 
+               .O());
+   INV  XLXI_2 (.I(bb), 
+               .O(XLXN_87));
+   INV  XLXI_3 (.I(cc), 
+               .O(XLXN_92));
+   INV  XLXI_4 (.I(dd), 
+               .O(XLXN_91));
+   OR4  XLXI_5 (.I0(XLXN_107), 
+               .I1(XLXN_97), 
+               .I2(cc), 
+               .I3(aa), 
+               .O(a));
+   OR3  XLXI_7 (.I0(XLXN_111), 
+               .I1(XLXN_101), 
+               .I2(XLXN_87), 
+               .O(b));
+   OR3  XLXI_11 (.I0(dd), 
+                .I1(XLXN_92), 
+                .I2(bb), 
+                .O(c));
+   OR5  XLXI_14 (.I0(XLXN_106), 
+                .I1(XLXN_108), 
+                .I2(XLXN_107), 
+                .I3(XLXN_104), 
+                .I4(aa), 
+                .O(d));
+   OR2  XLXI_15 (.I0(XLXN_108), 
+                .I1(XLXN_107), 
+                .O(e));
+   OR4  XLXI_16 (.I0(XLXN_111), 
+                .I1(XLXN_113), 
+                .I2(XLXN_114), 
+                .I3(aa), 
+                .O(f));
+   OR4  XLXI_17 (.I0(XLXN_114), 
+                .I1(XLXN_104), 
+                .I2(XLXN_113), 
+                .I3(aa), 
+                .O(g));
+endmodule
+`timescale 1ns / 1ps
+
+module testDividerAndCounterLED(XLXN_18, 
+                                XLXN_19, 
+                                XLXN_292, 
+                                XLXN_8, 
+                                XLXN_9, 
+                                XLXN_10, 
+                                XLXN_11, 
+                                XLXN_12, 
+                                XLXN_13, 
+                                XLXN_14, 
+                                XLXN_149, 
+                                XLXN_150, 
+                                XLXN_288);
+
+    input XLXN_18;
+    input XLXN_19;
+    input XLXN_292;
+   output XLXN_8;
+   output XLXN_9;
+   output XLXN_10;
+   output XLXN_11;
+   output XLXN_12;
+   output XLXN_13;
+   output XLXN_14;
+   output XLXN_149;
+   output XLXN_150;
+   output XLXN_288;
+   
+   wire COMMON1;
+   wire XLXN_151;
+   wire XLXN_152;
+   wire XLXN_153;
+   wire XLXN_154;
+   wire XLXN_280;
+   wire XLXN_281;
+   wire XLXN_282;
+   wire XLXN_283;
+   wire XLXN_284;
+   wire XLXN_285;
+   wire XLXN_286;
+   wire XLXN_287;
+   
+   decoder7segment_MUSER_testDividerAndCounterLED  XLXI_3 (.aa(XLXN_151), 
+                                                          .bb(XLXN_152), 
+                                                          .cc(XLXN_153), 
+                                                          .a(XLXN_8), 
+                                                          .b(XLXN_10), 
+                                                          .c(XLXN_11), 
+                                                          .d(XLXN_9), 
+                                                          .dd(XLXN_154), 
+                                                          .e(XLXN_12), 
+                                                          .f(XLXN_13), 
+                                                          .g(XLXN_14));
+   multiCounter_MUSER_testDividerAndCounterLED  XLXI_6 (.cl(COMMON1), 
+                                                       .increase_one(XLXN_292), 
+                                                       .sw(XLXN_19), 
+                                                       .a0(XLXN_280), 
+                                                       .a1(XLXN_284), 
+                                                       .b0(XLXN_281), 
+                                                       .b1(XLXN_285), 
+                                                       .c0(XLXN_282), 
+                                                       .c1(XLXN_286), 
+                                                       .d0(XLXN_283), 
+                                                       .d1(XLXN_287));
+   multiplexer_MUSER_testDividerAndCounterLED  XLXI_14 (.a0(XLXN_280), 
+                                                       .a1(XLXN_284), 
+                                                       .b0(XLXN_281), 
+                                                       .b1(XLXN_285), 
+                                                       .CLOCK200(COMMON1), 
+                                                       .c0(XLXN_282), 
+                                                       .c1(XLXN_286), 
+                                                       .d0(XLXN_283), 
+                                                       .d1(XLXN_287), 
+                                                       .a(XLXN_151), 
+                                                       .b(XLXN_152), 
+                                                       .c(XLXN_153), 
+                                                       .d(XLXN_154), 
+                                                       .G0(XLXN_149), 
+                                                       .G1(XLXN_150));
+   (* HU_SET = "XLXI_17_46" *) 
+   COMP4_HXILINX_testDividerAndCounterLED  XLXI_17 (.A0(XLXN_280), 
+                                                   .A1(XLXN_281), 
+                                                   .A2(XLXN_282), 
+                                                   .A3(XLXN_283), 
+                                                   .B0(XLXN_284), 
+                                                   .B1(XLXN_285), 
+                                                   .B2(XLXN_286), 
+                                                   .B3(XLXN_287), 
+                                                   .EQ(XLXN_288));
+   frequencyDevider_MUSER_testDividerAndCounterLED  XLXI_20 
+         (.CLOCK20M(XLXN_18), 
+                                                            .clock20(COMMON1));
+endmodule

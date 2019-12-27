@@ -1,0 +1,21 @@
+
+
+
+NET "LEDA" LOC = P79;
+NET "LEDB" LOC = P80;
+NET "LEDC" LOC = P81;
+NET "LEDD" LOC = P82;
+NET "XLXN_29" LOC = P41;
+NET "XLXN_30" LOC = P34;
+NET "XLXN_31" LOC = P40;
+NET "XLXN_32" LOC = P35;
+NET "XLXN_33" LOC = P32;
+NET "XLXN_34" LOC = P29;
+NET "XLXN_35" LOC = P27;
+
+
+NET "XLXN_5" LOC = P45;
+
+# PlanAhead Generated physical constraints 
+
+NET "XLXN_37" LOC = P44;

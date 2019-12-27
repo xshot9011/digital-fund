@@ -1,0 +1,24 @@
+
+
+NET "XLXN_7[0]" LOC = P41;
+NET "XLXN_7[1]" LOC = P40;
+NET "XLXN_7[2]" LOC = P35;
+NET "XLXN_7[3]" LOC = P34;
+NET "XLXN_7[4]" LOC = P32;
+NET "XLXN_7[5]" LOC = P29;
+NET "XLXN_7[6]" LOC = P27;
+NET "clock20MHz" LOC = P123;
+
+NET "P47" LOC = P47;
+NET "P48" LOC = P48;
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "common[3]" LOC = P30;
+NET "common[2]" LOC = P33;
+NET "common[1]" LOC = P43;
+NET "common[0]" LOC = P44;
+
+NET "XLXN_121" LOC = P26;

@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.xst" -ofn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc frequencyDevider.ucf -p xc6slx9-tqg144-3 testDividerAndCounterLED.ngc testDividerAndCounterLED.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ngd testDividerAndCounterLED.pcf 
+par -w -intstyle ise -ol high -mt off testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ncd testDividerAndCounterLED.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testDividerAndCounterLED.twx testDividerAndCounterLED.ncd -o testDividerAndCounterLED.twr testDividerAndCounterLED.pcf -ucf frequencyDevider.ucf 
+bitgen -intstyle ise -f testDividerAndCounterLED.ut testDividerAndCounterLED.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.xst" -ofn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc frequencyDevider.ucf -p xc6slx9-tqg144-3 testDividerAndCounterLED.ngc testDividerAndCounterLED.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ngd testDividerAndCounterLED.pcf 
+par -w -intstyle ise -ol high -mt off testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ncd testDividerAndCounterLED.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testDividerAndCounterLED.twx testDividerAndCounterLED.ncd -o testDividerAndCounterLED.twr testDividerAndCounterLED.pcf -ucf frequencyDevider.ucf 
+bitgen -intstyle ise -f testDividerAndCounterLED.ut testDividerAndCounterLED.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.xst" -ofn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc frequencyDevider.ucf -p xc6slx9-tqg144-3 testDividerAndCounterLED.ngc testDividerAndCounterLED.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ngd testDividerAndCounterLED.pcf 
+par -w -intstyle ise -ol high -mt off testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ncd testDividerAndCounterLED.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testDividerAndCounterLED.twx testDividerAndCounterLED.ncd -o testDividerAndCounterLED.twr testDividerAndCounterLED.pcf -ucf frequencyDevider.ucf 
+bitgen -intstyle ise -f testDividerAndCounterLED.ut testDividerAndCounterLED.ncd 
+xst -intstyle ise -ifn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.xst" -ofn "C:/digitalWorkspace/lab6/testDividerAndCounterLED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc frequencyDevider.ucf -p xc6slx9-tqg144-3 testDividerAndCounterLED.ngc testDividerAndCounterLED.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ngd testDividerAndCounterLED.pcf 
+par -w -intstyle ise -ol high -mt off testDividerAndCounterLED_map.ncd testDividerAndCounterLED.ncd testDividerAndCounterLED.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testDividerAndCounterLED.twx testDividerAndCounterLED.ncd -o testDividerAndCounterLED.twr testDividerAndCounterLED.pcf -ucf frequencyDevider.ucf 
+bitgen -intstyle ise -f testDividerAndCounterLED.ut testDividerAndCounterLED.ncd 

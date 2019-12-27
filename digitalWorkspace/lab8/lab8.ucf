@@ -1,0 +1,32 @@
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "common[1]" LOC = P43;
+NET "common[0]" LOC = P44;
+NET "dip[0]" LOC = P99;
+NET "dip[1]" LOC = P100;
+NET "dip[2]" LOC = P101;
+NET "dip[3]" LOC = P102;
+NET "dip[4]" LOC = P104;
+NET "dip[5]" LOC = P105;
+NET "dip[6]" LOC = P111;
+NET "dip[7]" LOC = P112;
+NET "segment[6]" LOC = P27;
+NET "segment[5]" LOC = P29;
+NET "segment[4]" LOC = P32;
+NET "segment[3]" LOC = P34;
+NET "segment[2]" LOC = P35;
+NET "segment[1]" LOC = P40;
+NET "segment[0]" LOC = P41;
+NET "beep" LOC = P83;
+NET "XLXN_8" LOC = P123;
+NET "slide[0]" LOC = P66;
+NET "slide[1]" LOC = P62;
+NET "slide[2]" LOC = P61;
+NET "slide[3]" LOC = P59;
+NET "slide[4]" LOC = P58;
+NET "slide[5]" LOC = P57;
+NET "slide[6]" LOC = P56;
+NET "slide[7]" LOC = P55;

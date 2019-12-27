@@ -1,0 +1,5 @@
+[Inputs]
+=LED_BCD[2:0]=
+[Outputs]
+=LED_out[6:0]=
+[BiDir]

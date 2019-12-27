@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym to1000Hz C:/digitalWorkspace/lab8/to1000Hz.sch C:/digitalWorkspace/lab8/to1000Hz.sym 

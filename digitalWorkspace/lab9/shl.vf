@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : shl.vf
+// /___/   /\     Timestamp : 11/11/2019 11:35:13
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab9/shl.vf -w C:/digitalWorkspace/lab9/shl.sch
+//Design Name: shl
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module shl(a, 
+           b);
+
+    input [7:0] a;
+   output [7:0] b;
+   
+   
+   GND  XLXI_2 (.G(b[0]));
+   BUF  XLXI_4 (.I(a[1]), 
+               .O(b[2]));
+   BUF  XLXI_5 (.I(a[2]), 
+               .O(b[3]));
+   BUF  XLXI_6 (.I(a[3]), 
+               .O(b[4]));
+   BUF  XLXI_7 (.I(a[4]), 
+               .O(b[5]));
+   BUF  XLXI_8 (.I(a[5]), 
+               .O(b[6]));
+   BUF  XLXI_9 (.I(a[6]), 
+               .O(b[7]));
+   BUF  XLXI_10 (.I(a[0]), 
+                .O(b[1]));
+endmodule

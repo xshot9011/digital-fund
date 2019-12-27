@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym full_adder_8bit C:/digitalWorkspace/lab9/full_adder_8bit.sch C:/digitalWorkspace/lab9/full_adder_8bit.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym full_adder_8bit C:/digitalWorkspace/lab9/full_adder_8bit.sch C:/digitalWorkspace/lab9/full_adder_8bit.sym 

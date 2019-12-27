@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="alu">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2019-11-11T4:26:2</timestamp>
+    <pin polarity="Input" x="64" y="63" name="in1(7:0)" />
+    <pin polarity="Input" x="64" y="127" name="in2(7:0)" />
+    <pin polarity="Input" x="64" y="191" name="s0" />
+    <pin polarity="Input" x="64" y="255" name="s1" />
+    <pin polarity="Output" x="320" y="63" name="bcd(7:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-8" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="63" type="pin in1(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="127" type="pin in2(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="191" type="pin s0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="255" type="pin s1" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="63" type="pin bcd(7:0)" />
+        <rect width="0" x="64" y="51" height="24" />
+        <line x2="64" y1="63" y2="63" x1="64" />
+        <rect width="0" x="64" y="115" height="24" />
+        <line x2="64" y1="127" y2="127" x1="64" />
+        <line x2="64" y1="191" y2="191" x1="64" />
+        <line x2="64" y1="255" y2="255" x1="64" />
+        <rect width="0" x="320" y="51" height="24" />
+        <line x2="320" y1="63" y2="63" x1="320" />
+        <rect width="256" x="64" y="0" height="256" />
+    </graph>
+</symbol>

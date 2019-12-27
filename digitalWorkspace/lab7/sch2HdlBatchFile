@@ -1,0 +1,6 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/testCombine.vf,-w,C:/digitalWorkspace/lab7/testCombine.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/myMultiplexer.vf,-w,C:/digitalWorkspace/lab7/myMultiplexer.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/switch.vf,-w,C:/digitalWorkspace/lab7/switch.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/to10Hz.vf,-w,C:/digitalWorkspace/lab7/to10Hz.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/testCombine.vf,-w,C:/digitalWorkspace/lab7/testCombine.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/digitalWorkspace/lab7/switch.vf,-w,C:/digitalWorkspace/lab7/switch.sch

@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym counter06 C:/digitalWorkspace/lab7/counter06.sch C:/digitalWorkspace/lab7/counter06.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym counter06 C:/digitalWorkspace/lab7/counter06.sch C:/digitalWorkspace/lab7/counter06.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym counter06 C:/digitalWorkspace/lab7/counter06.sch C:/digitalWorkspace/lab7/counter06.sym 

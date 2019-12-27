@@ -1,0 +1,6 @@
+[Inputs]
+clk
+[Outputs]
+=common[3:0]=
+=light[5:0]=
+[BiDir]

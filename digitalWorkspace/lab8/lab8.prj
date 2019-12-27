@@ -1,0 +1,4 @@
+verilog work "to1000Hz.vf"
+verilog work "myMultiplexer.vf"
+verilog work "bcdToHexDecoder.vf"
+verilog work "lab8.vf"

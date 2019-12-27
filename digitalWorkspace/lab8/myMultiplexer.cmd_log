@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym myMultiplexer C:/digitalWorkspace/lab8/myMultiplexer.sch C:/digitalWorkspace/lab8/myMultiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym myMultiplexer C:/digitalWorkspace/lab8/myMultiplexer.sch C:/digitalWorkspace/lab8/myMultiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym myMultiplexer C:/digitalWorkspace/lab8/myMultiplexer.sch C:/digitalWorkspace/lab8/myMultiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym myMultiplexer C:/digitalWorkspace/lab8/myMultiplexer.sch C:/digitalWorkspace/lab8/myMultiplexer.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym myMultiplexer C:/digitalWorkspace/lab8/myMultiplexer.sch C:/digitalWorkspace/lab8/myMultiplexer.sym 

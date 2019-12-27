@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml lab8.twx lab8.ncd -o lab8.twr lab8.pcf -ucf lab8.ucf
+
+Design file:              lab8.ncd
+Physical constraint file: lab8.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock XLXN_8
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_8         |    1.341|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+dip<0>         |beep           |   10.293|
+dip<0>         |segment<0>     |   14.923|
+dip<0>         |segment<1>     |   12.996|
+dip<0>         |segment<2>     |   12.695|
+dip<0>         |segment<3>     |   15.345|
+dip<0>         |segment<4>     |   12.650|
+dip<0>         |segment<5>     |   13.403|
+dip<0>         |segment<6>     |   13.494|
+dip<1>         |beep           |   10.577|
+dip<1>         |segment<0>     |   15.206|
+dip<1>         |segment<1>     |   13.279|
+dip<1>         |segment<2>     |   12.978|
+dip<1>         |segment<3>     |   15.628|
+dip<1>         |segment<4>     |   12.933|
+dip<1>         |segment<5>     |   13.686|
+dip<1>         |segment<6>     |   13.777|
+dip<2>         |beep           |   10.364|
+dip<2>         |segment<0>     |   15.035|
+dip<2>         |segment<1>     |   13.108|
+dip<2>         |segment<2>     |   12.807|
+dip<2>         |segment<3>     |   15.457|
+dip<2>         |segment<4>     |   12.762|
+dip<2>         |segment<5>     |   13.515|
+dip<2>         |segment<6>     |   13.606|
+dip<3>         |beep           |   10.164|
+dip<3>         |segment<0>     |   14.969|
+dip<3>         |segment<1>     |   13.042|
+dip<3>         |segment<2>     |   12.741|
+dip<3>         |segment<3>     |   15.391|
+dip<3>         |segment<4>     |   12.696|
+dip<3>         |segment<5>     |   13.449|
+dip<3>         |segment<6>     |   13.540|
+dip<4>         |beep           |   10.708|
+dip<4>         |segment<0>     |   15.536|
+dip<4>         |segment<1>     |   13.626|
+dip<4>         |segment<2>     |   13.219|
+dip<4>         |segment<3>     |   15.958|
+dip<4>         |segment<4>     |   13.263|
+dip<4>         |segment<5>     |   13.938|
+dip<4>         |segment<6>     |   14.107|
+dip<5>         |beep           |   10.479|
+dip<5>         |segment<0>     |   15.301|
+dip<5>         |segment<1>     |   13.397|
+dip<5>         |segment<2>     |   12.939|
+dip<5>         |segment<3>     |   15.723|
+dip<5>         |segment<4>     |   13.028|
+dip<5>         |segment<5>     |   13.703|
+dip<5>         |segment<6>     |   13.872|
+dip<6>         |beep           |   10.337|
+dip<6>         |segment<0>     |   15.163|
+dip<6>         |segment<1>     |   13.255|
+dip<6>         |segment<2>     |   12.771|
+dip<6>         |segment<3>     |   15.585|
+dip<6>         |segment<4>     |   12.890|
+dip<6>         |segment<5>     |   13.565|
+dip<6>         |segment<6>     |   13.734|
+dip<7>         |beep           |   10.352|
+dip<7>         |segment<0>     |   13.659|
+dip<7>         |segment<1>     |   13.270|
+dip<7>         |segment<2>     |   12.786|
+dip<7>         |segment<3>     |   14.081|
+dip<7>         |segment<4>     |   12.879|
+dip<7>         |segment<5>     |   13.494|
+dip<7>         |segment<6>     |   12.610|
+slide<0>       |beep           |    9.955|
+slide<0>       |segment<0>     |   14.585|
+slide<0>       |segment<1>     |   12.658|
+slide<0>       |segment<2>     |   12.357|
+slide<0>       |segment<3>     |   15.007|
+slide<0>       |segment<4>     |   12.312|
+slide<0>       |segment<5>     |   13.065|
+slide<0>       |segment<6>     |   13.156|
+slide<1>       |beep           |    9.842|
+slide<1>       |segment<0>     |   14.450|
+slide<1>       |segment<1>     |   12.523|
+slide<1>       |segment<2>     |   12.222|
+slide<1>       |segment<3>     |   14.872|
+slide<1>       |segment<4>     |   12.177|
+slide<1>       |segment<5>     |   12.930|
+slide<1>       |segment<6>     |   13.021|
+slide<2>       |beep           |    9.688|
+slide<2>       |segment<0>     |   14.359|
+slide<2>       |segment<1>     |   12.432|
+slide<2>       |segment<2>     |   12.131|
+slide<2>       |segment<3>     |   14.781|
+slide<2>       |segment<4>     |   12.086|
+slide<2>       |segment<5>     |   12.839|
+slide<2>       |segment<6>     |   12.930|
+slide<3>       |beep           |    9.027|
+slide<3>       |segment<0>     |   13.832|
+slide<3>       |segment<1>     |   11.905|
+slide<3>       |segment<2>     |   11.604|
+slide<3>       |segment<3>     |   14.254|
+slide<3>       |segment<4>     |   11.559|
+slide<3>       |segment<5>     |   12.312|
+slide<3>       |segment<6>     |   12.403|
+slide<4>       |beep           |    9.348|
+slide<4>       |segment<0>     |   14.176|
+slide<4>       |segment<1>     |   12.266|
+slide<4>       |segment<2>     |   11.859|
+slide<4>       |segment<3>     |   14.598|
+slide<4>       |segment<4>     |   11.903|
+slide<4>       |segment<5>     |   12.578|
+slide<4>       |segment<6>     |   12.747|
+slide<5>       |beep           |    9.417|
+slide<5>       |segment<0>     |   14.239|
+slide<5>       |segment<1>     |   12.335|
+slide<5>       |segment<2>     |   11.877|
+slide<5>       |segment<3>     |   14.661|
+slide<5>       |segment<4>     |   11.966|
+slide<5>       |segment<5>     |   12.641|
+slide<5>       |segment<6>     |   12.810|
+slide<6>       |beep           |    9.512|
+slide<6>       |segment<0>     |   14.338|
+slide<6>       |segment<1>     |   12.430|
+slide<6>       |segment<2>     |   11.946|
+slide<6>       |segment<3>     |   14.760|
+slide<6>       |segment<4>     |   12.065|
+slide<6>       |segment<5>     |   12.740|
+slide<6>       |segment<6>     |   12.909|
+slide<7>       |beep           |    9.204|
+slide<7>       |segment<0>     |   12.511|
+slide<7>       |segment<1>     |   12.122|
+slide<7>       |segment<2>     |   11.638|
+slide<7>       |segment<3>     |   12.933|
+slide<7>       |segment<4>     |   11.731|
+slide<7>       |segment<5>     |   12.346|
+slide<7>       |segment<6>     |   11.462|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Oct 28 12:36:43 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

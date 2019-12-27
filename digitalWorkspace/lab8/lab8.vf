@@ -1,0 +1,552 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab8.vf
+// /___/   /\     Timestamp : 10/28/2019 12:36:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/digitalWorkspace/lab8/lab8.vf -w C:/digitalWorkspace/lab8/lab8.sch
+//Design Name: lab8
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M2_1E_HXILINX_lab8 (O, D0, D1, E, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  E;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or E or S0)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case(S0)
+        1'b0 : O <= D0;
+        1'b1 : O <= D1;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale  100 ps / 10 ps
+
+module ADD8_HXILINX_lab8 (CO, OFL, S, A, B, CI);
+
+
+   output 	      CO;
+   output 	      OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  [7:0]       B;
+   input              CI;
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = ( A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module COMP8_HXILINX_lab8 (EQ, A, B);
+    
+
+   output EQ;
+
+   input  [7:0] A;
+   input  [7:0] B;
+
+   assign EQ = (A==B) ;
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR6_HXILINX_lab8 (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR8_HXILINX_lab8 (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CD4CE_HXILINX_lab8(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   parameter TERMINAL_COUNT = 4'b1001;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+
+	else if (CE)
+          begin
+             if ({Q3,Q2,Q1,Q0} == 4'b1001)
+               {Q3,Q2,Q1,Q0} <= 4'b0000;
+             else if({Q3,Q2,Q1,Q0} == 4'b1011)
+               {Q3,Q2,Q1,Q0} <= 4'b0110;
+             else if({Q3,Q2,Q1,Q0} == 4'b1101)
+               {Q3,Q2,Q1,Q0} <= 4'b0100;
+             else if({Q3,Q2,Q1,Q0} == 4'b1111)
+               {Q3,Q2,Q1,Q0} <= 4'b0010;
+            
+             else
+	      {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+          end
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = CLR ? 1'b0 : ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_lab8(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module bcdToHexDecoder_MUSER_lab8(bcd, 
+                                  bit);
+
+    input [3:0] bcd;
+   output [6:0] bit;
+   
+   wire XLNX;
+   wire XLXN_17;
+   wire XLXN_22;
+   wire XLXN_31;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_73;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_81;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire XLXN_85;
+   wire XLXN_86;
+   wire XLXN_87;
+   wire XLXN_89;
+   wire XLXN_90;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_119;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_122;
+   wire XLXN_123;
+   wire XLXN_133;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_141;
+   
+   AND2  BAb (.I0(XLXN_93), 
+             .I1(bcd[1]), 
+             .O(XLXN_89));
+   AND2  BbAb (.I0(XLXN_93), 
+              .I1(XLXN_133), 
+              .O(XLXN_79));
+   AND2  CAb (.I0(XLXN_93), 
+             .I1(bcd[2]), 
+             .O(XLXN_94));
+   AND2  CB (.I0(bcd[1]), 
+            .I1(bcd[2]), 
+            .O(XLXN_119));
+   AND2  CbAb (.I0(XLXN_93), 
+              .I1(XLXN_81), 
+              .O(XLXN_120));
+   AND2  CBAbn (.I0(XLXN_93), 
+               .I1(XLXN_119), 
+               .O(XLXN_86));
+   AND2  CbB (.I0(bcd[1]), 
+             .I1(XLXN_81), 
+             .O(XLXN_97));
+   AND3  CBbA (.I0(bcd[0]), 
+              .I1(XLXN_133), 
+              .I2(bcd[2]), 
+              .O(XLXN_84));
+   AND2  CbBbAb (.I0(XLXN_79), 
+                .I1(XLXN_81), 
+                .O(XLXN_82));
+   AND2  DA (.I0(bcd[0]), 
+            .I1(bcd[3]), 
+            .O(XLXN_99));
+   AND2  DB (.I0(bcd[1]), 
+            .I1(bcd[3]), 
+            .O(XLXN_92));
+   AND2  DbA (.I0(bcd[0]), 
+             .I1(XLXN_73), 
+             .O(XLXN_22));
+   AND2  DBb (.I0(XLXN_133), 
+             .I1(bcd[3]), 
+             .O(XLXN_35));
+   AND2  DbBA (.I0(bcd[0]), 
+              .I1(XLNX), 
+              .O(XLXN_34));
+   AND2  DBbAb (.I0(XLXN_93), 
+               .I1(XLXN_35), 
+               .O(XLXN_121));
+   AND2  DbBAbn (.I0(XLXN_93), 
+                .I1(XLNX), 
+                .O(XLXN_85));
+   AND2  DBbAn (.I0(bcd[0]), 
+               .I1(XLXN_35), 
+               .O(XLXN_36));
+   AND2  DbBb (.I0(XLXN_133), 
+              .I1(XLXN_73), 
+              .O(XLXN_31));
+   AND2  DbBbAb (.I0(XLXN_93), 
+                .I1(XLXN_31), 
+                .O(XLXN_33));
+   AND2  DbBn (.I0(bcd[1]), 
+              .I1(XLXN_73), 
+              .O(XLNX));
+   AND2  DbC (.I0(bcd[2]), 
+             .I1(XLXN_73), 
+             .O(XLXN_139));
+   AND2  DbCA (.I0(bcd[2]), 
+              .I1(XLXN_22), 
+              .O(XLXN_123));
+   AND2  DbCb (.I0(XLXN_81), 
+              .I1(XLXN_73), 
+              .O(XLXN_78));
+   AND2  DbCbB (.I0(XLXN_81), 
+               .I1(XLNX), 
+               .O(XLXN_83));
+   AND2  DbCBbn (.I0(bcd[2]), 
+                .I1(XLXN_31), 
+                .O(XLXN_98));
+   AND2  DC (.I0(bcd[2]), 
+            .I1(bcd[3]), 
+            .O(XLXN_90));
+   AND2  DCb (.I0(XLXN_81), 
+             .I1(bcd[3]), 
+             .O(XLXN_17));
+   AND2  DCbA (.I0(bcd[0]), 
+              .I1(XLXN_17), 
+              .O(XLXN_87));
+   AND2  DCbBb (.I0(XLXN_133), 
+               .I1(XLXN_17), 
+               .O(XLXN_122));
+   AND2  DCbn (.I0(XLXN_81), 
+              .I1(bcd[3]), 
+              .O(XLXN_140));
+   INV  XLXI_1 (.I(bcd[0]), 
+               .O(XLXN_93));
+   INV  XLXI_2 (.I(bcd[1]), 
+               .O(XLXN_133));
+   INV  XLXI_3 (.I(bcd[2]), 
+               .O(XLXN_81));
+   INV  XLXI_4 (.I(bcd[3]), 
+               .O(XLXN_73));
+   (* HU_SET = "XLXI_21_17" *) 
+   OR6_HXILINX_lab8  XLXI_21 (.I0(XLXN_119), 
+                             .I1(XLNX), 
+                             .I2(XLXN_123), 
+                             .I3(XLXN_122), 
+                             .I4(XLXN_121), 
+                             .I5(XLXN_120), 
+                             .O(bit[0]));
+   OR5  XLXI_22 (.I0(XLXN_36), 
+                .I1(XLXN_34), 
+                .I2(XLXN_33), 
+                .I3(XLXN_78), 
+                .I4(XLXN_120), 
+                .O(bit[1]));
+   OR4  XLXI_25 (.I0(XLXN_92), 
+                .I1(XLXN_90), 
+                .I2(XLXN_89), 
+                .I3(XLXN_120), 
+                .O(bit[4]));
+   OR5  XLXI_26 (.I0(XLXN_17), 
+                .I1(XLXN_92), 
+                .I2(XLXN_98), 
+                .I3(XLXN_94), 
+                .I4(XLXN_79), 
+                .O(bit[5]));
+   OR5  XLXI_27 (.I0(XLXN_17), 
+                .I1(XLXN_99), 
+                .I2(XLXN_89), 
+                .I3(XLXN_98), 
+                .I4(XLXN_97), 
+                .O(bit[6]));
+   (* HU_SET = "XLXI_28_18" *) 
+   OR8_HXILINX_lab8  XLXI_28 (.I0(), 
+                             .I1(XLXN_87), 
+                             .I2(XLXN_35), 
+                             .I3(XLXN_86), 
+                             .I4(XLXN_85), 
+                             .I5(XLXN_84), 
+                             .I6(XLXN_83), 
+                             .I7(XLXN_82), 
+                             .O(bit[3]));
+   AND4  XLXI_29 (.I0(bcd[0]), 
+                 .I1(XLXN_133), 
+                 .I2(bcd[3]), 
+                 .I3(bcd[2]), 
+                 .O(XLXN_141));
+   OR5  XLXI_30 (.I0(XLXN_141), 
+                .I1(XLXN_140), 
+                .I2(XLXN_139), 
+                .I3(XLXN_22), 
+                .I4(XLXN_31), 
+                .O(bit[2]));
+endmodule
+`timescale 1ns / 1ps
+
+module myMultiplexer_MUSER_lab8(bit, 
+                                clock, 
+                                bcd, 
+                                com);
+
+    input [7:0] bit;
+    input clock;
+   output [3:0] bcd;
+   output [1:0] com;
+   
+   wire XLXN_35;
+   
+   (* HU_SET = "XLXI_5_19" *) 
+   M2_1E_HXILINX_lab8  XLXI_5 (.D0(bit[0]), 
+                              .D1(bit[4]), 
+                              .E(XLXN_35), 
+                              .S0(clock), 
+                              .O(bcd[0]));
+   BUF  XLXI_8 (.I(clock), 
+               .O(com[0]));
+   INV  XLXI_9 (.I(clock), 
+               .O(com[1]));
+   (* HU_SET = "XLXI_11_20" *) 
+   M2_1E_HXILINX_lab8  XLXI_11 (.D0(bit[1]), 
+                               .D1(bit[5]), 
+                               .E(XLXN_35), 
+                               .S0(clock), 
+                               .O(bcd[1]));
+   (* HU_SET = "XLXI_12_21" *) 
+   M2_1E_HXILINX_lab8  XLXI_12 (.D0(bit[2]), 
+                               .D1(bit[6]), 
+                               .E(XLXN_35), 
+                               .S0(clock), 
+                               .O(bcd[2]));
+   (* HU_SET = "XLXI_13_22" *) 
+   M2_1E_HXILINX_lab8  XLXI_13 (.D0(bit[3]), 
+                               .D1(bit[7]), 
+                               .E(XLXN_35), 
+                               .S0(clock), 
+                               .O(bcd[3]));
+   VCC  XLXI_18 (.P(XLXN_35));
+endmodule
+`timescale 1ns / 1ps
+
+module to1000Hz_MUSER_lab8(clockIn, 
+                           clockOut);
+
+    input clockIn;
+   output clockOut;
+   
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_52;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_105;
+   wire XLXN_107;
+   
+   (* HU_SET = "XLXI_31_23" *) 
+   CD4CE_HXILINX_lab8  XLXI_31 (.C(clockIn), 
+                               .CE(XLXN_105), 
+                               .CLR(), 
+                               .CEO(), 
+                               .Q0(), 
+                               .Q1(), 
+                               .Q2(), 
+                               .Q3(), 
+                               .TC(XLXN_43));
+   INV  XLXI_32 (.I(XLXN_43), 
+                .O(XLXN_49));
+   (* HU_SET = "XLXI_33_24" *) 
+   CD4CE_HXILINX_lab8  XLXI_33 (.C(XLXN_49), 
+                               .CE(XLXN_105), 
+                               .CLR(), 
+                               .CEO(), 
+                               .Q0(), 
+                               .Q1(), 
+                               .Q2(), 
+                               .Q3(), 
+                               .TC(XLXN_44));
+   INV  XLXI_34 (.I(XLXN_44), 
+                .O(XLXN_50));
+   (* HU_SET = "XLXI_36_25" *) 
+   CD4CE_HXILINX_lab8  XLXI_36 (.C(XLXN_50), 
+                               .CE(XLXN_105), 
+                               .CLR(), 
+                               .CEO(), 
+                               .Q0(), 
+                               .Q1(), 
+                               .Q2(), 
+                               .Q3(), 
+                               .TC(XLXN_52));
+   INV  XLXI_37 (.I(XLXN_52), 
+                .O(XLXN_54));
+   (* HU_SET = "XLXI_38_26" *) 
+   CD4CE_HXILINX_lab8  XLXI_38 (.C(XLXN_54), 
+                               .CE(XLXN_105), 
+                               .CLR(), 
+                               .CEO(), 
+                               .Q0(), 
+                               .Q1(), 
+                               .Q2(), 
+                               .Q3(), 
+                               .TC(XLXN_53));
+   INV  XLXI_39 (.I(XLXN_53), 
+                .O(XLXN_107));
+   (* HU_SET = "XLXI_63_27" *) 
+   FJKC_HXILINX_lab8  XLXI_63 (.C(XLXN_107), 
+                              .CLR(), 
+                              .J(XLXN_105), 
+                              .K(XLXN_105), 
+                              .Q(clockOut));
+   VCC  XLXI_64 (.P(XLXN_105));
+endmodule
+`timescale 1ns / 1ps
+
+module lab8(dip, 
+            slide, 
+            XLXN_8, 
+            beep, 
+            common, 
+            segment);
+
+    input [7:0] dip;
+    input [7:0] slide;
+    input XLXN_8;
+   output beep;
+   output [1:0] common;
+   output [6:0] segment;
+   
+   wire [7:0] XLXN_10;
+   wire XLXN_11;
+   wire [3:0] XLXN_13;
+   
+   (* HU_SET = "XLXI_3_28" *) 
+   ADD8_HXILINX_lab8  XLXI_3 (.A(slide[7:0]), 
+                             .B(dip[7:0]), 
+                             .CI(), 
+                             .CO(), 
+                             .OFL(), 
+                             .S(XLXN_10[7:0]));
+   to1000Hz_MUSER_lab8  XLXI_5 (.clockIn(XLXN_8), 
+                               .clockOut(XLXN_11));
+   myMultiplexer_MUSER_lab8  XLXI_7 (.bit(XLXN_10[7:0]), 
+                                    .clock(XLXN_11), 
+                                    .bcd(XLXN_13[3:0]), 
+                                    .com(common[1:0]));
+   bcdToHexDecoder_MUSER_lab8  XLXI_8 (.bcd(XLXN_13[3:0]), 
+                                      .bit(segment[6:0]));
+   (* HU_SET = "XLXI_9_29" *) 
+   COMP8_HXILINX_lab8  XLXI_9 (.A(XLXN_10[7:0]), 
+                              .B(), 
+                              .EQ(beep));
+endmodule

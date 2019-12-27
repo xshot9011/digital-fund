@@ -1,0 +1,3 @@
+MODULE common01
+	SUBMODULE counter09
+		INSTANCE XLXI_1
